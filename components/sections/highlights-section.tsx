@@ -1,0 +1,92 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Bot, Globe2, Handshake, Puzzle, Rocket, ShieldCheck, Workflow } from "lucide-react"
+
+const highlights = [
+  {
+    icon: Rocket,
+    title: "End-to-End AI Expertise",
+    description:
+      "We take you from readiness to production. Strategy, model development, system integration, and team training all handled under one roof no vendor juggling, no broken handovers.",
+  },
+  {
+    icon: Workflow,
+    title: "Practical, Not Hype",
+    description:
+      "We build AI that works in the real world: document intake, fraud detection, compliance monitoring, and customer support automating what matters most to your bottom line.",
+  },
+  {
+    icon: Puzzle,
+    title: "Legacy-Friendly Integration",
+    description:
+      "Your existing systems aren’t obsolete. We amplify them with APIs and microservices so you gain intelligence without expensive rip-and-replace migrations.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Secure & Compliant by Default",
+    description:
+      "Every build comes with governance, audit trails, and risk controls baked in. From Kenya’s Data Protection Act to GDPR principles, compliance is in our DNA.",
+  },
+  {
+    icon: Handshake,
+    title: "Partner, Not Vendor",
+    description:
+      "We co-create with your industry experts. You bring the domain knowledge, we bring the AI engineering together we deliver tools that actually solve your sector’s problems.",
+  },
+  {
+    icon: Globe2,
+    title: "Africa-Born, Globally Ready",
+    description:
+      "We’re rooted in Kenya’s innovation ecosystem but designed for global scale. Local realities understood, solutions built to world-class standards.",
+  },
+]
+
+export function HighlightsSection() {
+  return (
+    <section className="relative overflow-hidden py-16 lg:py-24">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.12),_transparent_55%)]" />
+      <div className="container">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-balance">Why Choose Lsl</h2>
+            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
+              At Lsl, we don’t just deliver AI solutions, we deliver trust, transformation, and results. Here’s why leading
+              businesses and forward-looking organizations choose us.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {highlights.map((highlight, index) => {
+              const Icon = highlight.icon
+              const order = String(index + 1).padStart(2, "0")
+
+              return (
+                <Card
+                  key={highlight.title}
+                  className="group relative flex h-full flex-col overflow-hidden border border-border/60 bg-background/75 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-[0_24px_55px_-25px_rgba(55,48,163,0.55)]"
+                >
+                  <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500/80 via-purple-500/70 to-sky-500/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <CardHeader className="space-y-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-indigo-600/10 text-indigo-600 shadow-inner shadow-indigo-500/10">
+                          <Icon className="h-7 w-7" aria-hidden="true" />
+                        </span>
+                        <CardTitle className="text-xl leading-tight">{highlight.title}</CardTitle>
+                      </div>
+                      <span className="text-3xl font-semibold text-indigo-600/70">{order}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <CardDescription className="text-base leading-relaxed text-left text-muted-foreground">
+                      {highlight.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
