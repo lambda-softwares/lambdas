@@ -4,55 +4,69 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { ArrowRight, Globe, Shield, Cloud, Smartphone } from "lucide-react"
+import { ArrowRight, Smartphone, Building2, CloudCog, ShieldCheck, Cpu } from "lucide-react"
 
-const features = [
-  {
-    icon: Globe,
-    title: "Web & Mobile Applications",
-    description: "Intuitive, high-performing apps designed to delight users, scale with demand, and drive engagement.",
-  },
-  {
-    icon: Cloud,
-    title: "Custom Enterprise Systems",
-    description:
-      "Tailored platforms that streamline operations across the enterprise designed around your unique workflows, not forced into one-size-fits-all systems.",
-  },
-  {
-    icon: Shield,
-    title: "Cloud-Native Platforms",
-    description:
-      "Architected for resilience and scale with built-in automation and monitoring so your business stays always-on and cost-efficient.",
-  },
+const deliverables = [
   {
     icon: Smartphone,
-    title: "Secure & Compliant Solutions",
+    title: "Web & Mobile Applications",
     description:
-      "Systems built with governance, auditability, and privacy protections at the core ready for regulatory scrutiny and enterprise adoption.",
+      "High-performing apps that engage users, open new channels, and are ready for search, recommendations, or assistants.",
+  },
+  {
+    icon: Building2,
+    title: "Enterprise Systems That Fit You",
+    description:
+      "Platforms that mirror your workflows end-to-end to eliminate inefficiencies and reduce costs across the business.",
+  },
+  {
+    icon: CloudCog,
+    title: "Cloud-Native & Hybrid Platforms",
+    description:
+      "Resilient, observable, and cost-efficient foundations that deploy in cloud, on-prem, or both as policy demands.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Secure & Compliant by Design",
+    description:
+      "Governance, audit trails, privacy protections, and access controls embedded from day one for regulated environments.",
+  },
+  {
+    icon: Cpu,
+    title: "AI-Ready Foundations",
+    description:
+      "Architecture and data pathways prepared to plug into AI consulting & integration effortlessly when timing is right.",
   },
 ]
 
-const technologies = [
-  "Next.js & React",
-  "React Native",
-  "TypeScript",
-  "Node.js",
-  "Python",
-  "FastAPI",
-  "PostgreSQL",
-  "MongoDB",
-  "AWS/GCP/Azure",
-  "Docker & Kubernetes",
-  "Terraform",
-  "GitHub Actions",
-  "Vercel",
-  "LangChain",
-  "Model Context Protocol (MCP) & FastMCP",
-  "Eliza",
-  "Hugging Face Transformers",
-  "PyTorch",
-  "Ray (Ray Tune / RLlib)",
-  "Vector Databases (pgvector, Pinecone, Weaviate)",
+const workSteps = [
+  {
+    step: "Discovery & Planning",
+    detail: "Align KPIs, risks, compliance, and operating realities.",
+    outcome: "Outcome: clear roadmap and feasible plan.",
+  },
+  {
+    step: "Agile Delivery",
+    detail: "Sprints, demos, and stakeholder feedback to keep momentum.",
+    outcome: "Outcome: visible progress and faster time to value.",
+  },
+  {
+    step: "Quality & Assurance",
+    detail: "Functional, performance, security, and AI-integration tests.",
+    outcome: "Outcome: production-grade reliability.",
+  },
+  {
+    step: "Deployment & Support",
+    detail: "Monitored rollouts, scaling, cost controls, and SLAs.",
+    outcome: "Outcome: smooth go-live and predictable operations.",
+  },
+]
+
+const assurances = [
+  "Interoperability: Contract-first APIs that integrate with ERPs, CRMs, and EMRs.",
+  "Residency & Sovereignty: Cloud, on-prem, or hybrid aligned to policy.",
+  "SLOs & Documentation: Availability and latency targets with runbooks and handover.",
+  "Cost Awareness: Guidance on when to keep infrastructure lean versus invest for scale.",
 ]
 
 export default function SoftwareDevelopmentPage() {
@@ -60,22 +74,19 @@ export default function SoftwareDevelopmentPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="py-16 lg:py-24">
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">
-                Intelligent Software Engineering
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <Badge variant="secondary" className="inline-flex">
+                Enterprise Software & Platforms
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">
-                Software Built to Evolve with You
-              </h1>
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed mb-8">
-                From enterprise systems to cloud-native applications, we deliver technology that grows with your business, adapts to change, and unlocks new opportunities for automation and intelligence.
+              <h1 className="text-4xl md:text-5xl font-bold text-balance">Enterprise Software, Built for Intelligence</h1>
+              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+                We design and deliver secure, scalable platforms that power your operations today and connect seamlessly to AI when you're ready.
               </p>
               <Button asChild size="lg">
                 <Link href="/contact">
-                  Discuss Your Project
+                  Talk to a Solutions Architect
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -83,122 +94,108 @@ export default function SoftwareDevelopmentPage() {
           </div>
         </section>
 
-        {/* Features */}
         <section className="py-16 bg-muted/30">
           <div className="container">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What we build</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {features.map((feature, index) => {
-                  const Icon = feature.icon
-                  return (
-                    <Card key={index} className="text-center">
-                      <CardHeader>
-                        <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mx-auto mb-4">
-                          <Icon className="h-8 w-8 text-indigo-600" />
-                        </div>
-                        <CardTitle className="text-lg">{feature.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-sm leading-relaxed">{feature.description}</CardDescription>
-                      </CardContent>
-                    </Card>
-                  )
-                })}
-              </div>
+            <div className="max-w-5xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground">
+              <h2 className="text-3xl font-bold text-foreground">Why This Matters</h2>
+              <p>
+                Enterprises must modernize core systems while preparing for AI. We build AI-ready platforms across cloud-native and hybrid environments that respect data sovereignty, keep costs predictable, and make future AI integration straightforward.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Technologies */}
         <section className="py-16">
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">Technologies we use</h2>
-              <p className="text-xl text-muted-foreground mb-12">
-                Modern, battle-tested engineering tooling paired with AI-native frameworks so we can ship intelligent,
-                production-ready products.
+            <div className="max-w-6xl mx-auto text-center mb-12 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">What We Deliver</h2>
+              <p className="text-lg text-muted-foreground">
+                Outcomes-focused engineering that keeps your platforms resilient today and ready for intelligence tomorrow.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {technologies.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="bg-muted/50 rounded-lg px-4 py-3 text-sm font-medium text-center hover:bg-muted transition-colors"
-                  >
-                    {tech}
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 max-w-6xl mx-auto">
+              {deliverables.map((item) => {
+                const Icon = item.icon
+                return (
+                  <Card key={item.title} className="h-full text-left">
+                    <CardHeader>
+                      <div className="w-14 h-14 rounded-xl bg-indigo-100 flex items-center justify-center mb-4">
+                        <Icon className="h-7 w-7 text-indigo-600" />
+                      </div>
+                      <CardTitle className="text-xl">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base leading-relaxed">{item.description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
+            <div className="max-w-4xl mx-auto text-center mt-12">
+              <p className="text-base text-muted-foreground">
+                Need AI strategy or integration?
+                <Link href="/services/ai-consulting" className="ml-2 font-semibold text-indigo-600 hover:underline">
+                  AI Consulting & Integration
+                </Link>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <div className="max-w-5xl mx-auto text-center mb-10 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">How We Work</h2>
+              <p className="text-lg text-muted-foreground">
+                Delivery designed for enterprise stakeholders with transparency, governance, and measurable progress at every step.
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
+              {workSteps.map((step, index) => (
+                <div key={step.step} className="rounded-2xl border bg-background p-6 text-left shadow-sm">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 text-white font-semibold">
+                      {(index + 1).toString().padStart(2, "0")}
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold">{step.step}</h3>
+                      <p className="text-base text-muted-foreground leading-relaxed">{step.detail}</p>
+                      <p className="text-sm font-medium text-foreground">{step.outcome}</p>
+                    </div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="container">
+            <div className="max-w-5xl mx-auto space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-center">Enterprise Assurances</h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                {assurances.map((assurance, index) => (
+                  <Card key={index} className="h-full">
+                    <CardContent className="pt-6">
+                      <CardDescription className="text-base leading-relaxed text-foreground">{assurance}</CardDescription>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Process */}
         <section className="py-16 bg-muted/30">
           <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our development process</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Discovery & Planning</h3>
-                    <p className="text-muted-foreground">
-                      We align on goals, map constraints, and design a roadmap that balances business priorities, compliance, and technical feasibility.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                    2
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Agile Development</h3>
-                    <p className="text-muted-foreground">
-                      We build in short cycles with regular demos and feedback loops, so you see progress at every stage.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                    3
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Testing & Quality Assurance</h3>
-                    <p className="text-muted-foreground">
-                      We validate functionality, performance, and security with rigorous testing at every level.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                    4
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Deployment & Support</h3>
-                    <p className="text-muted-foreground">
-                      We manage rollout with monitoring, scaling, and long-term maintenance options.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-16">
-          <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to build your next application?</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Let's discuss your requirements and create a solution that scales with your business.
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold">Build a platform that's ready for intelligence.</h2>
+              <p className="text-lg text-muted-foreground">
+                Let's architect the foundations that keep today's operations strong and make tomorrow's AI deployments seamless.
               </p>
               <Button asChild size="lg">
                 <Link href="/contact">
-                  Start Your Project
+                  Talk to a Solutions Architect
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -206,6 +203,11 @@ export default function SoftwareDevelopmentPage() {
           </div>
         </section>
       </main>
+      <div className="fixed bottom-4 inset-x-4 z-40 md:hidden">
+        <Button asChild size="lg" className="w-full shadow-lg">
+          <Link href="/contact">Talk to an AI Architect</Link>
+        </Button>
+      </div>
       <Footer />
     </div>
   )

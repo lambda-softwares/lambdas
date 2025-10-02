@@ -4,75 +4,109 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { CheckCircle, Target, Cog, Zap } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
 
-const capabilities = [
+const valueCards = [
   {
-    title: "AI Readiness Assessments",
-    description:
-      "A structured audit of your digital maturity covering infrastructure, data governance, staff capabilities, and compliance readiness. We produce a roadmap that pinpoints where AI can add the most value and how to deploy it with minimal disruption.",
+    title: "AI Readiness Roadmaps",
+    description: "Identify high-impact use cases with ROI, risk, and compliance mapped.",
   },
   {
-    title: "Custom AI Models",
-    description:
-      "Domain-specific models engineered to solve real problems: credit risk scoring for financial institutions, yield prediction and disease detection for agriculture, litigation timeline forecasting for legal practice. Every model is tuned for accuracy, fairness, and interpretability.",
+    title: "Domain Models & Evaluations",
+    description: "Build and tune models with accuracy, fairness, and interpretability; evaluate continuously.",
   },
   {
-    title: "Seamless System Integration",
-    description:
-      "Embedded intelligence without the replatforming headache. We integrate AI into legacy systems, ERPs, CRMs, and proprietary software through APIs, microservices, and modular components—preserving your existing investments while enhancing them.",
+    title: "Seamless Integration",
+    description: "Augment ERPs, CRMs, and proprietary systems via modular services—no rip-and-replace.",
   },
   {
-    title: "Process Automation",
-    description:
-      "AI-powered agents that take on repetitive and complex tasks such as document classification, customer support, fraud detection, and regulatory monitoring—freeing your teams for higher-value work.",
+    title: "Agentic Automation",
+    description: "Document intake, fraud/compliance monitoring, and support bots that reduce cycle times and errors.",
   },
   {
-    title: "Change Management & Training",
-    description:
-      "Beyond the build, we arm your teams with playbooks, enablement, and hands-on training so AI-driven processes are adopted smoothly and sustained for the long term.",
+    title: "Change & Training",
+    description: "Playbooks and enablement so adoption sticks beyond the pilot.",
+  },
+]
+
+const deploymentOptions = [
+  {
+    title: "Cloud API",
+    description: "Fastest path to value for non-sensitive workloads and spiky demand.",
+  },
+  {
+    title: "On-Prem",
+    description: "Control, sovereignty, and cost predictability at scale; ideal for sensitive data and steady, high volume.",
+  },
+  {
+    title: "Hybrid",
+    description: "Sensitive tasks locally, burst and advanced use in cloud; best of both worlds.",
+  },
+]
+
+const deploymentComparisons = [
+  {
+    category: "Time-to-Value",
+    values: ["Days to weeks", "Weeks to months", "Weeks with phased rollout"],
+  },
+  {
+    category: "Cost Predictability",
+    values: ["Variable pay-per-use", "High predictability, capital aligned", "Blended: predictable core + elastic burst"],
+  },
+  {
+    category: "Data Control",
+    values: ["Vendor-managed", "Fully within your perimeter", "Sensitive data local, insights shared"],
+  },
+  {
+    category: "Compliance",
+    values: ["Shared responsibility", "Aligns with internal audit and regulators", "Targeted per workload"],
+  },
+  {
+    category: "Performance at Scale",
+    values: ["Elastic with usage", "High once provisioned", "Scale core locally, burst to cloud"],
   },
 ]
 
 const deliverySteps = [
   {
     step: "Discover",
-    blurb: "Define business goals, map constraints, and align on measurable KPIs.",
+    detail: "Goals, KPIs, risks.",
+    outcome: "Outcome: prioritized roadmap.",
   },
   {
     step: "Design",
-    blurb: "Architect the solution, define data contracts, and set success metrics.",
+    detail: "Architecture, data contracts, success metrics.",
+    outcome: "Outcome: cost-/compliance-balanced blueprint.",
   },
   {
     step: "Build",
-    blurb: "Develop models, services, evaluators, and dashboards—tested against real data.",
+    detail: "Models, services, evaluators.",
+    outcome: "Outcome: early value with quality signals.",
   },
   {
     step: "Integrate",
-    blurb: "Deploy safely using feature flags, blue/green rollouts, and full observability.",
+    detail: "Feature flags, blue/green, observability.",
+    outcome: "Outcome: safe rollout without downtime.",
   },
   {
     step: "Adopt",
-    blurb: "Train teams, hand over playbooks, and define SLAs for long-term success.",
+    detail: "Training, handover, SLAs.",
+    outcome: "Outcome: measurable ROI and sustained usage.",
   },
 ]
 
+const governanceItems = [
+  "Access & Identity: SSO, RBAC/ABAC, least-privilege enforced.",
+  "Data Controls: Residency, masking, retention, audit trails.",
+  "AI Safety: Guardrails, red-teaming, bias/toxicity checks with human-in-the-loop where required.",
+  "Regulatory Fit: Kenya DPA, GDPR principles, sector readiness for healthcare, finance, and public sector.",
+]
+
 const outcomes = [
-  {
-    icon: Target,
-    title: "Cost reduction via automation",
-    description: "Eliminate manual processes and reduce operational overhead",
-  },
-  {
-    icon: Zap,
-    title: "Faster, smarter decisions",
-    description: "Real-time insights and predictive analytics for competitive advantage",
-  },
-  {
-    icon: Cog,
-    title: "Compliance-by-design and future-proofing",
-    description: "Built-in governance and scalable architecture for long-term success",
-  },
+  "Lower cost and predictability via automation plus the right deployment economics.",
+  "Faster, smarter decisions grounded in your data, not demos.",
+  "Freedom from lock-in with flexible architectures across API, local, and hybrid.",
+  "Compliance by design with auditability and controls built in.",
 ]
 
 export default function AIConsultingPage() {
@@ -80,77 +114,126 @@ export default function AIConsultingPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="py-16 lg:py-24">
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <Badge variant="secondary" className="inline-flex">
                 AI Consulting & Integration
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance leading-tight">
-                From traditional IT to an Intelligent, Impactful enterprise
-              </h1>
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed mt-6">
-                At Lsl, we help organizations evolve their technology from static infrastructure into dynamic,
-                insight-driven systems. By integrating AI into your existing stack, we transform workflows, unlock
-                intelligence, and deliver measurable impact without forcing costly rip-and-replace. Your systems stay
-                familiar; the outcomes accelerate and compound.
+              <h1 className="text-4xl md:text-5xl font-bold text-balance leading-tight">AI Consulting & Integration</h1>
+              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+                We integrate AI into the systems you already trust—automating work, accelerating decisions, and keeping governance tight. Cloud APIs when speed matters; on-prem or hybrid when control and cost predictability win.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Why Choose AI Integration */}
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground">
+              <h2 className="text-3xl font-bold text-foreground">The Enterprise Challenge</h2>
+              <p>
+                Legacy keeps the lights on but slows change. Pure API-only AI can be fast but risks lock-in, unpredictable spend, and data governance gaps.
+              </p>
+              <p>
+                The answer is intelligence embedded into your existing stack with the right deployment model for your risk, cost, and compliance profile.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16">
           <div className="container">
-            <div className="relative max-w-5xl mx-auto overflow-hidden rounded-3xl border border-indigo-100/60 bg-gradient-to-br from-white via-indigo-50/40 to-slate-50 shadow-lg">
-              <span className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-indigo-200/40 blur-3xl" />
-              <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-indigo-100/60">
-                <div className="p-10 md:p-12">
-                  <span className="mb-4 inline-flex items-center rounded-full bg-indigo-100 px-3 py-1 text-sm font-semibold text-indigo-700">
-                    The Challenge
-                  </span>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4">IT built for yesterday’s problems</h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Manual workflows, siloed data, and slow decision cycles make it hard to move at the speed customers
-                    expect. Legacy systems weren’t designed with intelligence in mind.
-                  </p>
+            <div className="max-w-5xl mx-auto text-center mb-12 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">What We Do</h2>
+              <p className="text-lg text-muted-foreground">
+                Move from exploration to outcomes with AI that fits your operations, risk posture, and data estate.
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto space-y-6">
+              {valueCards.map((card) => (
+                <div key={card.title} className="rounded-2xl border bg-background p-6 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-indigo-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+                      <p className="text-base text-muted-foreground leading-relaxed">{card.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-10 md:p-12 bg-white/70">
-                  <span className="mb-4 inline-flex items-center rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold text-indigo-600">
-                    Our Promise
-                  </span>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4">Systems that become teammates</h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    We embed AI into what you already run,automating routine work, unlocking insights, and elevating
-                    customer experience. Your stack evolves without costly rip-and-replace.
-                  </p>
-                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <div className="mb-12 text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold">Deployment Choices</h2>
+                <p className="text-lg text-muted-foreground">
+                  Cloud API | On-Prem | Hybrid—pick the deployment that balances time-to-value, control, and cost.
+                </p>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3 mb-10">
+                {deploymentOptions.map((option) => (
+                  <Card key={option.title} className="h-full">
+                    <CardHeader>
+                      <CardTitle className="text-xl">{option.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base leading-relaxed">{option.description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              <div className="overflow-hidden rounded-2xl border">
+                <table className="w-full text-sm md:text-base">
+                  <thead className="bg-muted/60">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-semibold text-foreground">Decision Lens</th>
+                      {deploymentOptions.map((option) => (
+                        <th key={option.title} className="px-4 py-3 text-left font-semibold text-foreground">
+                          {option.title}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {deploymentComparisons.map((row) => (
+                      <tr key={row.category} className="border-t bg-background">
+                        <td className="px-4 py-3 font-medium text-foreground">{row.category}</td>
+                        {row.values.map((value, index) => (
+                          <td key={index} className="px-4 py-3 text-muted-foreground align-top">{value}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </section>
 
-        {/* What We Do */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16">
           <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What we do</h2>
-              <p className="text-lg text-muted-foreground text-center mb-10">
-                We turn AI from a buzzword into business value—embedding it where it creates measurable impact.
-              </p>
-              <div className="space-y-6">
-                {capabilities.map((capability) => (
-                  <div
-                    key={capability.title}
-                    className="rounded-2xl border border-border/60 bg-background/80 p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
-                  >
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-indigo-600 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2">{capability.title}</h3>
-                        <p className="text-base text-muted-foreground leading-relaxed">{capability.description}</p>
-                      </div>
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-14 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold">Delivery Approach</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  From first workshop to scaled adoption, each stage balances value, compliance, and change management.
+                </p>
+              </div>
+              <div className="grid gap-8 md:grid-cols-5">
+                {deliverySteps.map((step, index) => (
+                  <div key={step.step} className="text-center md:text-left space-y-4">
+                    <div className="mx-auto md:mx-0 flex h-12 w-12 items-center justify-center rounded-full border-2 border-indigo-500/70 bg-white text-indigo-600 font-semibold">
+                      {(index + 1).toString().padStart(2, "0")}
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold">{step.step}</h3>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{step.detail}</p>
+                      <p className="text-sm font-medium text-foreground">{step.outcome}</p>
                     </div>
                   </div>
                 ))}
@@ -159,70 +242,60 @@ export default function AIConsultingPage() {
           </div>
         </section>
 
-        {/* Delivery Approach */}
-        <section className="py-16">
-          <div className="container">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-14 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold">Our delivery approach</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  From strategy to adoption, we guide you through a proven path that delivers AI safely and at speed.
-                </p>
-              </div>
-
-              <div className="relative">
-                <div className="hidden md:block absolute top-16 left-12 right-12 h-0.5 bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-100" />
-
-                <div className="grid gap-10 md:grid-cols-5">
-                  {deliverySteps.map((step, index) => (
-                    <div key={step.step} className="relative flex flex-col items-center text-center md:text-left">
-                      <div className="relative z-10 flex items-center md:flex-col md:items-start md:gap-4 gap-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-indigo-500/70 bg-white text-indigo-600 shadow-md font-semibold">
-                          {(index + 1).toString().padStart(2, "0")}
-                        </div>
-                        <div className="max-w-xs md:max-w-none">
-                          <h3 className="text-xl font-semibold md:text-left">{step.step}</h3>
-                          <p className="mt-2 text-sm md:text-base text-muted-foreground leading-relaxed md:text-left">
-                            {step.blurb}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Outcomes */}
         <section className="py-16 bg-muted/30">
           <div className="container">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Outcomes you can expect</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {outcomes.map((outcome, index) => {
-                  const Icon = outcome.icon
-                  return (
-                    <Card key={index} className="text-center">
-                      <CardHeader>
-                        <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mx-auto mb-4">
-                          <Icon className="h-8 w-8 text-indigo-600" />
-                        </div>
-                        <CardTitle className="text-xl">{outcome.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-base leading-relaxed">{outcome.description}</CardDescription>
-                      </CardContent>
-                    </Card>
-                  )
-                })}
-              </div>
+            <div className="max-w-5xl mx-auto space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold">Governance, Security & Compliance</h2>
+              <ul className="space-y-4 text-base text-muted-foreground leading-relaxed">
+                {governanceItems.map((item, index) => (
+                  <li key={index} className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 rounded-full bg-indigo-600 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
+        <section className="py-16">
+          <div className="container">
+            <div className="max-w-4xl mx-auto space-y-10 text-center">
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold">Outcomes You Can Expect</h2>
+                <ul className="space-y-3 text-lg text-muted-foreground leading-relaxed text-left md:text-center">
+                  {outcomes.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3 md:justify-center">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-indigo-600 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-base text-muted-foreground">
+                Need AI-ready platforms?
+                <Link href="/services/software-development" className="ml-2 font-semibold text-indigo-600 hover:underline">
+                  Enterprise Software & Digital Platforms
+                </Link>
+              </p>
+              <div className="space-y-4">
+                <p className="text-lg text-muted-foreground">See where AI pays off first.</p>
+                <Button asChild size="lg">
+                  <Link href="/contact">
+                    Talk to an AI Architect
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      <div className="fixed bottom-4 inset-x-4 z-40 md:hidden">
+        <Button asChild size="lg" className="w-full shadow-lg">
+          <Link href="/contact">Talk to an AI Architect</Link>
+        </Button>
+      </div>
       <Footer />
     </div>
   )

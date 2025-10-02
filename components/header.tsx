@@ -9,12 +9,12 @@ import { ChevronDown, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const serviceLinks = [
-  { label: "AI Consulting", href: "/services/ai-consulting" },
-  { label: "Software Development", href: "/services/software-development" },
+  { label: "AI Consulting & Integration", href: "/services/ai-consulting" },
+  { label: "Enterprise Software & Platforms", href: "/services/software-development" },
 ]
 
 const navigation = [
-  { label: "Services", href: "/services", children: serviceLinks },
+  { label: "Enterprise Services", href: "/services", children: serviceLinks },
   { label: "Solutions", href: "/solutions" },
   { label: "Innovation Labs", href: "/products" },
   { label: "About", href: "/about" },

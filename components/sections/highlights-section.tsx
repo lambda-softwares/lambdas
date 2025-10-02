@@ -47,7 +47,7 @@ export function HighlightsSection() {
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-balance">Why Choose Lsl</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-balance">Why Enterprises Choose Lsl</h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
               At Lsl, we don’t just deliver AI solutions, we deliver trust, transformation, and results. Here’s why leading
               businesses and forward-looking organizations choose us.

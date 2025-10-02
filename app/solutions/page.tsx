@@ -18,6 +18,8 @@ import {
   Film,
   Home,
   MapPin,
+  Shield,
+  Headset,
 } from "lucide-react"
 
 const sectors = [
@@ -104,6 +106,18 @@ const sectors = [
     title: "Tourism & Hospitality",
     description: "AI travel planners, dynamic pricing, virtual concierges, sentiment analysis",
     href: "/solutions/tourism-hospitality",
+  },
+  {
+    icon: Shield,
+    title: "Security & Defense",
+    description: "Drone surveillance, border monitoring, threat detection, crime pattern analysis",
+    href: "/contact",
+  },
+  {
+    icon: Headset,
+    title: "Marketing, Call Centers & Customer Care",
+    description: "Conversational AI, sentiment analysis, lead scoring, intelligent agent assist, customer experience optimization",
+    href: "/contact",
   },
 ]
 

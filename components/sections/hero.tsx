@@ -10,9 +10,9 @@ export function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance mb-6">
             The Bridge from Software to <span className="text-indigo-600">Intelligent Systems</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground text-pretty mb-8 max-w-3xl mx-auto leading-relaxed">
-            Most businesses run on yesterday's tools. At Lsl, we help you cross into the future, embedding AI into what you already use, co-building domain-specific platforms, and shipping consumer apps that solve real problems.
-          </p>
+          <div className="text-xl md:text-2xl text-muted-foreground text-pretty mb-8 max-w-3xl mx-auto leading-relaxed space-y-4">
+            <p>Most enterprises still run on outdated systems manual workflows, siloed data, and slow decisions. We help you modernize without disruption, embedding AI into what you already use, co-developing domain solutions, and testing future technologies in our innovation labs.</p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="text-lg px-8 py-6">
               <Link href="/contact">
