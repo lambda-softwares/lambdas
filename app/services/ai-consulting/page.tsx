@@ -17,7 +17,7 @@ const valueCards = [
   },
   {
     title: "Seamless Integration",
-    description: "Augment ERPs, CRMs, and proprietary systems via modular services—no rip-and-replace.",
+    description: "Augment ERPs, CRMs, and proprietary systems via modular services, no rip-and-replace.",
   },
   {
     title: "Agentic Automation",
@@ -122,7 +122,7 @@ export default function AIConsultingPage() {
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold text-balance leading-tight">AI Consulting & Integration</h1>
               <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-                We integrate AI into the systems you already trust—automating work, accelerating decisions, and keeping governance tight. Cloud APIs when speed matters; on-prem or hybrid when control and cost predictability win.
+                We integrate AI into the systems you already trust automating work, accelerating decisions, and keeping governance tight. Cloud APIs when speed matters; on-prem or hybrid when control and cost predictability win.
               </p>
             </div>
           </div>

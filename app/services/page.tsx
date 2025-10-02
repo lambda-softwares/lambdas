@@ -36,7 +36,32 @@ const services = [
   },
 ]
 
+const roadmapSteps = [
+  {
+    title: "Start with strategy",
+    description: "Identify use cases with measurable ROI, not just buzz.",
+  },
+  {
+    title: "Augment, don't replace",
+    description: "Protect existing investments while making them intelligent.",
+  },
+  {
+    title: "Balance cost & control",
+    description: "Cloud APIs for speed, on-prem for sovereignty, and hybrid for the best of both.",
+  },
+  {
+    title: "Governance by default",
+    description: "Auditability, compliance, and privacy baked in.",
+  },
+  {
+    title: "Sustain adoption",
+    description: "Training, playbooks, and SLAs that keep AI running long-term.",
+  },
+]
+
 export default function ServicesPage() {
+  const marqueeSteps = [...roadmapSteps, ...roadmapSteps]
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -48,7 +73,7 @@ export default function ServicesPage() {
                 Enterprise Services for the Intelligent Era
               </h1>
               <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
-                From legacy systems to intelligent enterprise, we modernize safely, integrate AI where it matters, and build platforms that scale—designed for security, compliance, and measurable ROI.
+                From legacy systems to intelligent enterprises, we modernize safely, integrate AI where it matters, and build platforms that scale—designed for security, compliance, and measurable ROI.
               </p>
             </div>
 
@@ -57,7 +82,7 @@ export default function ServicesPage() {
                 <h2 className="text-2xl font-semibold">Who We Serve</h2>
                 <div className="space-y-3 text-muted-foreground text-lg">
                   <p>Enterprises and public institutions with significant data, compliance mandates, and complex workflows.</p>
-                  <p>Teams exploring AI pilots or production integrations—including on-prem and hybrid deployments for data-sensitive environments.</p>
+                  <p>Teams exploring AI pilots or scaling production integrations—including on-prem and hybrid deployments for data-sensitive environments.</p>
                 </div>
               </div>
             </div>
@@ -99,13 +124,14 @@ export default function ServicesPage() {
             </div>
 
             <div className="max-w-5xl mx-auto mt-20">
-              <h2 className="text-3xl font-bold text-center mb-8">Why Lsl</h2>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 text-left">
+              <h2 className="text-3xl font-bold text-center mb-8">Challenges We Solve</h2>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-left">
                 {[
-                  "Africa-born, enterprise-ready: Local realities, global standards.",
-                  "AI without disruption: Augment systems, don't rip-and-replace.",
-                  "Governance & auditability: Compliance built in.",
-                  "Cost-aware choices: Cloud APIs when speed matters; on-prem when control counts.",
+                  "Legacy drag → Systems that run the business but block innovation and agility.",
+                  "AI hype vs. value → Pilots that stall, vendor lock-in, and unpredictable AI API costs.",
+                  "Compliance pressure → Data residency, sovereignty, and auditability requirements.",
+                  "Integration headaches → Adding intelligence without disrupting mission-critical systems.",
+                  "Change fatigue → AI projects that fail because teams aren't equipped to adopt them.",
                 ].map((item, index) => (
                   <div key={index} className="rounded-2xl border bg-background p-6 shadow-sm">
                     <p className="text-muted-foreground leading-relaxed">{item}</p>
@@ -114,32 +140,33 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div className="max-w-5xl mx-auto mt-20">
-              <h2 className="text-3xl font-bold text-center mb-10">Proof Snapshots</h2>
-              <div className="grid gap-6 md:grid-cols-3">
-                {[
-                  {
-                    label: "Legal",
-                    result: "Drafting time ↓ 60% via research/drafting copilot.",
-                  },
-                  {
-                    label: "Agri",
-                    result: "Yield forecast accuracy ↑ 18% (drone + IoT fusion).",
-                  },
-                  {
-                    label: "Finance",
-                    result: "$2M+ fraud blocked with real-time scoring.",
-                  },
-                ].map((proof, index) => (
-                  <Card key={index} className="h-full">
-                    <CardHeader>
-                      <CardTitle className="text-xl">{proof.label}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base leading-relaxed">{proof.result}</CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
+            <div className="max-w-6xl mx-auto mt-20">
+              <h2 className="text-3xl font-bold text-center mb-8">Our Enterprise Approach</h2>
+              <div className="lsl-roadmap-viewport relative overflow-hidden rounded-3xl border border-border/70 bg-muted/30 p-6 md:p-10">
+                <div className="lsl-roadmap-track flex gap-6" aria-live="polite">
+                  {marqueeSteps.map((step, index) => {
+                    const displayNumber = ((index % roadmapSteps.length) + 1).toString().padStart(2, "0")
+                    const isDuplicate = index >= roadmapSteps.length
+                    return (
+                      <article
+                        key={`${step.title}-${index}`}
+                        className="lsl-roadmap-card relative flex h-full min-h-[220px] min-w-[260px] max-w-[320px] flex-col justify-between rounded-2xl border border-indigo-200/60 bg-background/90 p-6 shadow-sm"
+                        aria-hidden={isDuplicate}
+                      >
+                        <header className="mb-4 flex items-center gap-3">
+                          <span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-100/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-700">
+                            Step {displayNumber}
+                          </span>
+                          <span className="h-px flex-1 rounded-full bg-indigo-200" aria-hidden="true" />
+                        </header>
+                        <div className="space-y-3 text-left">
+                          <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
+                          <p className="text-base leading-relaxed text-muted-foreground">{step.description}</p>
+                        </div>
+                      </article>
+                    )
+                  })}
+                </div>
               </div>
             </div>
 
@@ -147,7 +174,7 @@ export default function ServicesPage() {
               <p className="text-lg text-muted-foreground mb-6">Ready to modernize?</p>
               <Button asChild size="lg">
                 <Link href="/contact">
-                  Talk to an AI Architect
+                  Talk to an AI Architect and let's design your roadmap from legacy IT to intelligent enterprise.
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

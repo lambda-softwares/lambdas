@@ -123,3 +123,87 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .lsl-roadmap-viewport {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    touch-action: pan-y;
+  }
+
+  .lsl-roadmap-viewport::before,
+  .lsl-roadmap-viewport::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4rem;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .lsl-roadmap-viewport::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0));
+  }
+
+  .lsl-roadmap-viewport::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0));
+  }
+
+  .dark .lsl-roadmap-viewport::before {
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0));
+  }
+
+  .dark .lsl-roadmap-viewport::after {
+    background: linear-gradient(270deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0));
+  }
+
+  .lsl-roadmap-track {
+    display: inline-flex;
+    gap: 1.5rem;
+    width: max-content;
+    padding: 0.75rem 0;
+    will-change: transform;
+    animation: lsl-roadmap-marquee 28s linear infinite;
+  }
+
+  .lsl-roadmap-card {
+    min-width: 260px;
+    max-width: 320px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .lsl-roadmap-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes lsl-roadmap-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 48rem) {
+  @layer components {
+    .lsl-roadmap-track {
+      animation-duration: 18s;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @layer components {
+    .lsl-roadmap-track {
+      animation: none;
+      transform: none !important;
+    }
+  }
+}
