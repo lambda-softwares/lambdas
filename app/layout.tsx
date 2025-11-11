@@ -4,6 +4,7 @@ import { Domine, Karla, Oswald } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
+import { ChatWidget } from "@/components/chat/chat-widget"
 
 const SITE_URL = "https://www.lsl.co.ke"
 
@@ -107,6 +108,7 @@ export default function RootLayout({
         <Suspense>
           {children}
           <Analytics />
+          <ChatWidget />
         </Suspense>
       </body>
     </html>

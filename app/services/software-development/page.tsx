@@ -97,9 +97,9 @@ export default function SoftwareDevelopmentPage() {
         <section className="py-16 bg-muted/30">
           <div className="container">
             <div className="max-w-5xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <h2 className="text-3xl font-bold text-foreground">Why This Matters</h2>
+              <h2 className="text-3xl font-bold text-foreground">The Shift Every Enterprise Faces</h2>
               <p>
-                Enterprises must modernize core systems while preparing for AI. We build AI-ready platforms across cloud-native and hybrid environments that respect data sovereignty, keep costs predictable, and make future AI integration straightforward.
+               Legacy systems keep businesses alive, but not ahead. To compete, enterprises need platforms that scale, comply, and evolve into intelligent systems without blowing up costs or breaking sovereignty rules. We design foundations that work now and adapt effortlessly when AI is ready to step in.
               </p>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function SoftwareDevelopmentPage() {
         <section className="py-16">
           <div className="container">
             <div className="max-w-6xl mx-auto text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">What We Deliver</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">What You Gain</h2>
               <p className="text-lg text-muted-foreground">
                 Outcomes-focused engineering that keeps your platforms resilient today and ready for intelligence tomorrow.
               </p>

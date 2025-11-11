@@ -174,6 +174,14 @@ export default function AIConsultingPage() {
                 <p className="text-lg text-muted-foreground">
                   Cloud API | On-Prem | Hybrid—pick the deployment that balances time-to-value, control, and cost.
                 </p>
+                <div className="pt-4">
+                  <Button asChild variant="outline" size="lg">
+                    <Link href="/services/ai-consulting/llm-cost-calculator">
+                      <ArrowRight className="mr-2 h-5 w-5" />
+                      Calculate Your Deployment Costs
+                    </Link>
+                  </Button>
+                </div>
               </div>
               <div className="grid gap-6 md:grid-cols-3 mb-10">
                 {deploymentOptions.map((option) => (
@@ -280,12 +288,19 @@ export default function AIConsultingPage() {
               </p>
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground">See where AI pays off first.</p>
-                <Button asChild size="lg">
-                  <Link href="/contact">
-                    Talk to an AI Architect
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button asChild size="lg">
+                    <Link href="/contact">
+                      Talk to an AI Architect
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline">
+                    <Link href="/services/ai-consulting/llm-cost-calculator">
+                      LLM Cost Calculator
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
