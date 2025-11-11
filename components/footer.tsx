@@ -30,7 +30,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2" aria-label="Lsl home">
               <Image
-                src="/Lsl_logo.svg"
+                src="/lsl-logo.png"
                 alt="Lsl"
                 width={200}
                 height={200}

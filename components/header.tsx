@@ -36,7 +36,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2" aria-label="Lsl home">
           <Image
-            src="/Lsl_logo.svg"
+            src="/lsl-logo.png"
             alt="Lsl"
             width={140}
             height={140}

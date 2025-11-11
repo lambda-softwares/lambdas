@@ -85,7 +85,7 @@ export const metadata: Metadata = {
       "@type": "Organization",
       name: "Lsl",
       url: "https://www.lsl.co.ke",
-      logo: new URL("/Lsl_logo.svg", SITE_URL).toString(),
+      logo: new URL("/lsl-logo.png", SITE_URL).toString(),
       description: "Kenya's technology transformation partner offering AI consulting, industry-specific solutions across 14+ sectors, consumer app development, and system integration services. Private limited company specializing in AI-driven transformation of existing systems.",
       address: {
         "@type": "PostalAddress",
