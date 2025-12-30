@@ -43,7 +43,7 @@ export function CaseTeaserSection() {
                   <CardDescription className="text-[1.0625rem] leading-[1.29] mb-4">{caseItem.description}</CardDescription>
                   <Link
                     href={caseItem.href}
-                    className="inline-flex items-center text-[0.9375rem] leading-[1.33] font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
+                    className="inline-flex items-center text-[0.9375rem] leading-[1.33] font-semibold text-[#324038] hover:text-[#3d4f45] transition-colors"
                   >
                     Explore solutions
                     <ArrowRight className="ml-1 h-4 w-4" />

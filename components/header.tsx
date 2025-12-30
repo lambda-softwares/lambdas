@@ -14,7 +14,7 @@ const serviceLinks = [
 ]
 
 const navigation = [
-  { label: "Enterprise Services", href: "/services", children: serviceLinks },
+  { label: "Services", href: "/services", children: serviceLinks },
   { label: "Solutions", href: "/solutions" },
   { label: "Labs", href: "/products" },
   { label: "About", href: "/about" },
@@ -32,7 +32,7 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{ borderBottom: "1px solid rgba(121, 89, 83, 0.08)" }}>
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2" aria-label="Lsl home">
           <Image

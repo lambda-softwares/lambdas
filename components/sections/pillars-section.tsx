@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Brain, Building2, Smartphone } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 const pillars = [
   {
@@ -9,22 +10,54 @@ const pillars = [
     title: "AI Consulting & Integration",
     description: "Transform traditional IT systems into intelligent, automated platforms. From readiness assessments to production deployment and team training.",
     href: "/services/ai-consulting",
+    // Roycroft Bottle Green #324038 with White Mink #EFEEE9
+    gradientFrom: "rgba(50, 64, 56, 0.08)",
+    gradientVia: "rgba(239, 238, 233, 0.12)",
+    gradientTo: "rgba(239, 238, 233, 0.15)",
+    borderFrom: "rgba(50, 64, 56, 1)",
+    borderTo: "rgba(121, 89, 83, 1)",
+    iconBg: "bg-[#324038]/10",
+    iconColor: "text-[#324038]",
+    iconGlow: "shadow-[0_0_20px_rgba(50,64,56,0.3)]",
+    buttonColor: "#324038",
   },
   {
     icon: Building2,
     title: "Industry-Specific Solutions",
     description: "Partnership-based co-development of AI solutions across 14+ sectors. Contextually accurate, compliant, and genuinely impactful.",
     href: "/solutions",
+    // Sequoia Dusk #795953 with White Mink #EFEEE9
+    gradientFrom: "rgba(121, 89, 83, 0.08)",
+    gradientVia: "rgba(239, 238, 233, 0.12)",
+    gradientTo: "rgba(239, 238, 233, 0.15)",
+    borderFrom: "rgba(121, 89, 83, 1)",
+    borderTo: "rgba(50, 64, 56, 1)",
+    iconBg: "bg-[#795953]/10",
+    iconColor: "text-[#795953]",
+    iconGlow: "shadow-[0_0_20px_rgba(121,89,83,0.3)]",
+    buttonColor: "#795953",
   },
   {
     icon: Smartphone,
     title: "Consumer Innovation Labs",
     description: "In-house apps that solve everyday problems while serving as testing grounds for enterprise AI technologies.",
     href: "/products",
+    // White Mink #EFEEE9 with Matt Black #151515 accents
+    gradientFrom: "rgba(239, 238, 233, 0.95)",
+    gradientVia: "rgba(239, 238, 233, 0.98)",
+    gradientTo: "rgba(239, 238, 233, 1)",
+    borderFrom: "rgba(21, 21, 21, 0.2)",
+    borderTo: "rgba(50, 64, 56, 0.3)",
+    iconBg: "bg-[#151515]/5",
+    iconColor: "text-[#324038]",
+    iconGlow: "shadow-[0_0_20px_rgba(21,21,21,0.2)]",
+    buttonColor: "#324038",
   },
 ]
 
 export function PillarsSection() {
+  const FeaturedIcon = pillars[0].icon
+  
   return (
     <section className="py-16 lg:py-24">
       <div className="container">
@@ -37,30 +70,133 @@ export function PillarsSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pillars.map((pillar, index) => {
-              const Icon = pillar.icon
-              return (
-                <Card key={index} className="relative group hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-indigo-600" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Large Featured Card - AI Consulting */}
+            <Card
+                  className={cn(
+                    "relative group overflow-hidden md:col-span-2",
+                    "border-2 border-transparent",
+                    "hover:scale-[1.02] hover:-translate-y-1",
+                    "transition-all duration-300 ease-out",
+                    "shadow-[0_4px_20px_rgba(0,0,0,0.08)]",
+                    "hover:shadow-[0_8px_30px_rgba(50,64,56,0.2)]",
+                    "before:absolute before:inset-0 before:rounded-xl before:p-[2px]",
+                    "before:bg-gradient-to-r before:from-[#324038] before:to-[#795953]",
+                    "before:opacity-0 before:transition-opacity before:duration-300",
+                    "before:group-hover:opacity-100 before:-z-10"
+                  )}
+                  style={{
+                    background: `linear-gradient(to bottom right, ${pillars[0].gradientFrom}, ${pillars[0].gradientVia}, ${pillars[0].gradientTo})`,
+                  }}
+                >
+                  <div className="relative z-20 p-8">
+                    <CardHeader className="p-0 mb-6">
+                      <div
+                        className={cn(
+                          "w-16 h-16 rounded-xl flex items-center justify-center mb-6",
+                          "transition-all duration-300",
+                          "group-hover:scale-110",
+                          pillars[0].iconBg
+                        )}
+                      >
+                        <FeaturedIcon
+                          className={cn(
+                            "h-8 w-8 transition-all duration-300",
+                            pillars[0].iconColor,
+                            "group-hover:shadow-[0_0_20px_rgba(50,64,56,0.3)]"
+                          )}
+                        />
+                      </div>
+                  <CardTitle className="text-[1.5rem] md:text-[1.75rem] leading-[1.21] tracking-[-0.01em] mb-3">
+                    {pillars[0].title}
+                  </CardTitle>
+                  <CardDescription className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
+                    {pillars[0].description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <Button
+                    asChild
+                    className="font-semibold px-6 py-2.5 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:brightness-110"
+                    style={{ backgroundColor: pillars[0].buttonColor, color: "#EFEEE9" }}
+                  >
+                    <Link href={pillars[0].href}>Learn more →</Link>
+                  </Button>
+                </CardContent>
+              </div>
+            </Card>
+
+            {/* Smaller Cards Stack */}
+            <div className="flex flex-col gap-6 md:col-span-1">
+              {pillars.slice(1).map((pillar, index) => {
+                const Icon = pillar.icon
+                return (
+                  <Card
+                    key={index}
+                    className={cn(
+                      "relative group overflow-hidden",
+                      "border-2 border-transparent",
+                      "hover:scale-[1.02] hover:-translate-y-1",
+                      "transition-all duration-300 ease-out",
+                      "shadow-[0_4px_15px_rgba(0,0,0,0.06)]",
+                      "hover:shadow-[0_6px_25px_rgba(0,0,0,0.12)]",
+                      "before:absolute before:inset-0 before:rounded-xl before:p-[2px]",
+                      index === 0 
+                        ? "before:bg-gradient-to-r before:from-[#795953] before:to-[#324038]"
+                        : "before:bg-gradient-to-r before:from-[#151515] before:to-[#324038]",
+                      "before:opacity-0 before:transition-opacity before:duration-300",
+                      "before:group-hover:opacity-100 before:-z-10"
+                    )}
+                    style={{
+                      background: `linear-gradient(to bottom right, ${pillar.gradientFrom}, ${pillar.gradientVia}, ${pillar.gradientTo})`,
+                    }}
+                  >
+                    <div className="relative z-20 p-6">
+                      <CardHeader className="p-0 mb-4">
+                        <div
+                          className={cn(
+                            "w-12 h-12 rounded-lg flex items-center justify-center mb-4",
+                            "transition-all duration-300",
+                            "group-hover:scale-110",
+                            pillar.iconBg
+                          )}
+                        >
+                          <Icon
+                            className={cn(
+                              "h-6 w-6 transition-all duration-300",
+                              pillar.iconColor,
+                              index === 0 
+                                ? "group-hover:shadow-[0_0_20px_rgba(121,89,83,0.3)]"
+                                : "group-hover:shadow-[0_0_20px_rgba(50,64,56,0.3)]"
+                            )}
+                          />
+                        </div>
+                        <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] mb-2">
+                          {pillar.title}
+                        </CardTitle>
+                        <CardDescription className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
+                          {pillar.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="p-0">
+                        <Button
+                          asChild
+                          variant="ghost"
+                          className={cn(
+                            "p-0 h-auto font-semibold transition-all duration-300 hover:translate-x-1",
+                            index === 0 ? "text-[#795953] hover:text-[#6b4f49]" : "text-[#795953] hover:text-[#6b4f49]"
+                          )}
+                        >
+                          <Link href={pillar.href}>
+                            Learn more →
+                          </Link>
+                        </Button>
+                      </CardContent>
                     </div>
-                    <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em]">{pillar.title}</CardTitle>
-                    <CardDescription className="text-[1.0625rem] leading-[1.29]">{pillar.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button
-                      asChild
-                      variant="ghost"
-                      className="p-0 h-auto font-semibold text-indigo-600 hover:text-indigo-700"
-                    >
-                      <Link href={pillar.href}>Learn more →</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              )
-            })}
+                  </Card>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>

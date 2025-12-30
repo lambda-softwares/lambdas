@@ -24,7 +24,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/50">
+    <footer style={{ backgroundColor: "#EFEEE9", borderTop: "1px solid rgba(121, 89, 83, 0.05)" }}>
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
@@ -108,7 +108,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center">
+        <div className="mt-8 pt-8 text-center" style={{ borderTop: "1px solid rgba(121, 89, 83, 0.08)" }}>
           <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">© 2026 Lsl. All rights reserved.</p>
         </div>
       </div>

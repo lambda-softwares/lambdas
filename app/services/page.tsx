@@ -93,8 +93,8 @@ export default function ServicesPage() {
                 return (
                   <Card key={index} className="group hover:shadow-xl transition-all duration-300">
                     <CardHeader className="pb-6">
-                      <div className="w-16 h-16 rounded-xl bg-indigo-100 flex items-center justify-center mb-6">
-                        <Icon className="h-8 w-8 text-indigo-600" />
+                      <div className="w-16 h-16 rounded-xl bg-[#324038]/10 flex items-center justify-center mb-6">
+                        <Icon className="h-8 w-8 text-[#324038]" />
                       </div>
                       <CardTitle className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold mb-4">{service.title}</CardTitle>
                       <CardDescription className="text-[1.0625rem] leading-[1.29]">{service.description}</CardDescription>
@@ -105,7 +105,7 @@ export default function ServicesPage() {
                         <ul className="flex flex-col gap-2">
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-[0.9375rem] leading-[1.33] text-muted-foreground">
-                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-600 mr-3 flex-shrink-0" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-[#324038] mr-3 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
@@ -150,11 +150,11 @@ export default function ServicesPage() {
                     return (
                       <article
                         key={`${step.title}-${index}`}
-                        className="lsl-roadmap-card relative flex h-full min-h-[220px] min-w-[260px] max-w-[320px] flex-col justify-between rounded-2xl border border-indigo-200/60 bg-background/90 p-6 shadow-sm"
+                        className="lsl-roadmap-card relative flex h-full min-h-[220px] min-w-[260px] max-w-[320px] flex-col justify-between rounded-2xl border border-[#324038]/20 bg-background/90 p-6 shadow-sm"
                         aria-hidden={isDuplicate}
                       >
                         <header className="mb-4 flex items-center gap-3">
-                          <span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-100/60 px-3 py-1 text-[0.75rem] leading-[1.33] font-semibold uppercase tracking-wide text-indigo-700">
+                          <span className="inline-flex items-center rounded-full border border-[#324038]/30 bg-[#324038]/10 px-3 py-1 text-[0.75rem] leading-[1.33] font-semibold uppercase tracking-wide text-[#324038]">
                             Step {displayNumber}
                           </span>
                           <span className="h-px flex-1 rounded-full bg-indigo-200" aria-hidden="true" />

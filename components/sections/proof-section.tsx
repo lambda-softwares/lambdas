@@ -9,7 +9,7 @@ export function ProofSection() {
   ]
 
   return (
-    <section className="py-12 border-b">
+    <section className="py-12" style={{ borderBottom: "1px solid rgba(121, 89, 83, 0.05)" }}>
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-8">Trusted by forward-thinking organizations across sectors</p>

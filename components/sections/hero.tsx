@@ -8,7 +8,7 @@ export function Hero() {
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-[2.125rem] md:text-[2.75rem] lg:text-[3.5rem] font-semibold text-balance mb-6 leading-[1.2] tracking-[-0.02em]">
-            The Bridge from Software to <span className="text-indigo-600">Intelligent Systems</span>
+            The Bridge from Software to <span className="text-[#324038]">Intelligent Systems</span>
           </h1>
           <div className="text-[1.25rem] md:text-[1.375rem] text-muted-foreground text-pretty mb-8 max-w-3xl mx-auto leading-[1.25] flex flex-col gap-4">
             <p>Most enterprises still run on outdated systems manual workflows, siloed data, and slow decisions. We help you modernize without disruption, embedding AI into what you already use, co-developing domain solutions, and testing future technologies in our innovation labs.</p>
@@ -32,7 +32,7 @@ export function Hero() {
 
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-indigo-100/20 to-transparent rounded-full blur-3xl" />
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#324038]/10 to-transparent rounded-full blur-3xl" />
       </div>
     </section>
   )
