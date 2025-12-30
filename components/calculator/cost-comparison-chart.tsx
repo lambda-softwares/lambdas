@@ -71,12 +71,12 @@ export function CostComparisonChart({ comparison, maxMonths = 60 }: CostComparis
               <XAxis
                 dataKey="month"
                 label={{ value: "Months", position: "insideBottom", offset: -5 }}
-                className="text-xs"
+                className="text-[0.75rem] leading-[1.33]"
               />
               <YAxis
                 label={{ value: "Total Cost (USD)", angle: -90, position: "insideLeft" }}
                 tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
-                className="text-xs"
+                className="text-[0.75rem] leading-[1.33]"
               />
               <Tooltip
                 content={({ active, payload }) => {
@@ -85,14 +85,14 @@ export function CostComparisonChart({ comparison, maxMonths = 60 }: CostComparis
                     <div className="bg-background border rounded-lg p-3 shadow-lg">
                       <p className="font-semibold mb-2">Month {payload[0]?.payload.month}</p>
                       {payload.map((entry, index) => (
-                        <p key={index} className="text-sm" style={{ color: entry.color }}>
+                        <p key={index} className="text-[0.9375rem] leading-[1.33]" style={{ color: entry.color }}>
                           {entry.name === "local" ? "Local Deployment" : "API Usage"}:{" "}
                           {formatCurrency(entry.value as number)}
                         </p>
                       ))}
                       {breakEvenInRange &&
                         Math.abs((payload[0]?.payload.month ?? 0) - comparison.breakEvenMonths) < 1 && (
-                          <p className="text-sm font-semibold text-indigo-600 mt-1">Break-even Point</p>
+                          <p className="text-[0.9375rem] leading-[1.33] font-semibold text-indigo-600 mt-1">Break-even Point</p>
                         )}
                     </div>
                   )
@@ -139,8 +139,8 @@ export function CostComparisonChart({ comparison, maxMonths = 60 }: CostComparis
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
           <div className="p-4 rounded-lg bg-muted/50">
-            <p className="text-sm text-muted-foreground mb-1">Break-even Point</p>
-            <p className="text-2xl font-bold">
+            <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-1">Break-even Point</p>
+            <p className="text-[1.75rem] leading-[1.21] font-semibold">
               {comparison.breakEvenMonths === Infinity
                 ? "Never"
                 : comparison.breakEvenMonths < 1
@@ -149,12 +149,12 @@ export function CostComparisonChart({ comparison, maxMonths = 60 }: CostComparis
             </p>
           </div>
           <div className="p-4 rounded-lg bg-muted/50">
-            <p className="text-sm text-muted-foreground mb-1">Hardware Investment</p>
-            <p className="text-2xl font-bold">{formatCurrency(comparison.localDeployment.hardwareCost)}</p>
+            <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-1">Hardware Investment</p>
+            <p className="text-[1.75rem] leading-[1.21] font-semibold">{formatCurrency(comparison.localDeployment.hardwareCost)}</p>
           </div>
           <div className="p-4 rounded-lg bg-muted/50">
-            <p className="text-sm text-muted-foreground mb-1">API Monthly Cost</p>
-            <p className="text-2xl font-bold">{formatCurrency(comparison.apiUsage.monthlyCost)}</p>
+            <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-1">API Monthly Cost</p>
+            <p className="text-[1.75rem] leading-[1.21] font-semibold">{formatCurrency(comparison.apiUsage.monthlyCost)}</p>
           </div>
         </div>
       </CardContent>

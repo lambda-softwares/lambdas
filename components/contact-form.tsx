@@ -101,7 +101,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
         {/* Honeypot field - hidden from users */}
         <FormField
           control={form.control}
@@ -240,7 +240,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               "Send Message"
             )}
           </Button>
-          <p className="text-sm text-muted-foreground mt-3 text-center">
+          <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mt-3 text-center">
             We'll only use your info to contact you about this request.
           </p>
         </div>

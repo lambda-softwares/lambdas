@@ -50,8 +50,8 @@ export default function ContactPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">Thank you for reaching out!</h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <h1 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-4 leading-[1.21] tracking-[-0.01em]">Thank you for reaching out!</h1>
+              <p className="text-[1.25rem] leading-[1.25] text-muted-foreground mb-8">
                 Our AI architects will reach out within 1–2 business days to discuss your project and explore how we can
                 help transform your systems.
               </p>
@@ -84,8 +84,8 @@ export default function ContactPage() {
               <Badge variant="secondary" className="mb-4">
                 Contact Us
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">Let's build something intelligent</h1>
-              <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
+              <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance mb-6 leading-[1.2] tracking-[-0.02em]">Let's build something intelligent</h1>
+              <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
                 Tell us about your system, data, and goals—we'll propose the fastest path to value. Whether you need AI
                 integration, custom development, or strategic consulting, we're here to help.
               </p>
@@ -96,8 +96,8 @@ export default function ContactPage() {
               <div className="lg:col-span-2">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-2xl">Start the conversation</CardTitle>
-                    <CardDescription className="text-base">
+                    <CardTitle className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold">Start the conversation</CardTitle>
+                    <CardDescription className="text-[1rem] leading-[1.31]">
                       Share your project details and we'll get back to you with a tailored approach.
                     </CardDescription>
                   </CardHeader>
@@ -110,8 +110,8 @@ export default function ContactPage() {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold mb-6">Get in touch</h2>
-                  <div className="space-y-6">
+                  <h2 className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold mb-6">Get in touch</h2>
+                  <div className="flex flex-col gap-6">
                     {contactInfo.map((info, index) => {
                       const Icon = info.icon
                       const content = (
@@ -145,36 +145,36 @@ export default function ContactPage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">What to expect</CardTitle>
+                    <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold">What to expect</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
+                  <CardContent className="flex flex-col gap-4">
+                    <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-xs font-bold text-indigo-600">1</span>
+                        <span className="text-[0.75rem] leading-[1.33] font-semibold text-indigo-600">1</span>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-sm">Initial Response</h4>
-                        <p className="text-sm text-muted-foreground">We'll acknowledge your inquiry within 24 hours</p>
+                        <h4 className="font-semibold text-[0.9375rem] leading-[1.33]">Initial Response</h4>
+                        <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">We'll acknowledge your inquiry within 24 hours</p>
                       </div>
                     </div>
-                    <div className="flex items-start space-x-3">
+                    <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-xs font-bold text-indigo-600">2</span>
+                        <span className="text-[0.75rem] leading-[1.33] font-semibold text-indigo-600">2</span>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-sm">Discovery Call</h4>
-                        <p className="text-sm text-muted-foreground">
+                        <h4 className="font-semibold text-[0.9375rem] leading-[1.33]">Discovery Call</h4>
+                        <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
                           30-minute call to understand your needs and challenges
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start space-x-3">
+                    <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-xs font-bold text-indigo-600">3</span>
+                        <span className="text-[0.75rem] leading-[1.33] font-semibold text-indigo-600">3</span>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-sm">Proposal</h4>
-                        <p className="text-sm text-muted-foreground">
+                        <h4 className="font-semibold text-[0.9375rem] leading-[1.33]">Proposal</h4>
+                        <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
                           Detailed approach, timeline, and investment outline
                         </p>
                       </div>

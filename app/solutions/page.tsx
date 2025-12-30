@@ -133,13 +133,13 @@ export default function SolutionsPage() {
                 <Badge variant="secondary" className="mb-4">
                   Industry Solutions
                 </Badge>
-                <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">AI That Understands Your Domain</h1>
-                <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
+                <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance mb-6 leading-[1.2] tracking-[-0.02em]">AI That Understands Your Domain</h1>
+                <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
                   Generic AI isn’t enough. That’s why we partner with domain experts to co-develop solutions that are
                   context-aware, compliant, and genuinely impactful.
                 </p>
                 <div className="mt-8 flex justify-center">
-                  <span className="inline-flex rounded-full bg-indigo-50/80 px-6 py-2 text-base font-semibold text-indigo-700 shadow-sm">
+                  <span className="inline-flex rounded-full bg-indigo-50/80 px-6 py-2 text-[1rem] leading-[1.31] font-semibold text-indigo-700 shadow-sm">
                     Wherever you work, we bring AI that understands your world.
                   </span>
                 </div>
@@ -147,21 +147,21 @@ export default function SolutionsPage() {
 
               <div className="grid gap-6 md:grid-cols-3 bg-muted/30 border border-border/70 rounded-2xl p-8 mb-16">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Why generic AI fails</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Most models don’t understand your rules, workflows, or compliance risks, leading to costly mistakes.
+                  <h3 className="text-[1.0625rem] leading-[1.29] font-semibold mb-2">Why generic AI fails</h3>
+                  <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
+                    Most models don't understand your rules, workflows, or compliance risks, leading to costly mistakes.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Our co-creation approach</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h3 className="text-[1.0625rem] leading-[1.29] font-semibold mb-2">Our co-creation approach</h3>
+                  <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
                     We co-build with industry experts, validate against real use cases, and bake governance into every
                     release.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">The result</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h3 className="text-[1.0625rem] leading-[1.29] font-semibold mb-2">The result</h3>
+                  <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
                     AI that solves actual problems delivered production-ready, compliant, and adoption-friendly.
                   </p>
                 </div>
@@ -176,10 +176,10 @@ export default function SolutionsPage() {
                         <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition-colors">
                           <Icon className="h-6 w-6 text-indigo-600" />
                         </div>
-                        <CardTitle className="text-lg leading-tight">{sector.title}</CardTitle>
+                        <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold">{sector.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <CardDescription className="text-sm leading-relaxed">{sector.description}</CardDescription>
+                        <CardDescription className="text-[0.9375rem] leading-[1.33]">{sector.description}</CardDescription>
                       </CardContent>
                     </Card>
                   )
@@ -187,12 +187,12 @@ export default function SolutionsPage() {
               </div>
 
               <div className="text-center mt-16">
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground mb-6">
                   Don't see your industry? We work across all sectors to solve unique challenges.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-lg font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
+                  className="inline-flex items-center text-[1.0625rem] leading-[1.29] font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
                 >
                   Discuss your industry needs →
                 </Link>

@@ -80,8 +80,8 @@ export default function SoftwareDevelopmentPage() {
               <Badge variant="secondary" className="inline-flex">
                 Enterprise Software & Platforms
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance">Enterprise Software, Built for Intelligence</h1>
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+              <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance leading-[1.2] tracking-[-0.02em]">Enterprise Software, Built for Intelligence</h1>
+              <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty">
                 We design and deliver secure, scalable platforms that power your operations today and connect seamlessly to AI when you're ready.
               </p>
               <Button asChild size="lg">
@@ -96,9 +96,9 @@ export default function SoftwareDevelopmentPage() {
 
         <section className="py-16 bg-muted/30">
           <div className="container">
-            <div className="max-w-5xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <h2 className="text-3xl font-bold text-foreground">The Shift Every Enterprise Faces</h2>
-              <p>
+            <div className="max-w-5xl mx-auto flex flex-col gap-6 text-[1.0625rem] leading-[1.29] text-muted-foreground">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-foreground leading-[1.21] tracking-[-0.01em]">The Shift Every Enterprise Faces</h2>
+              <p className="text-[1.0625rem] leading-[1.29]">
                Legacy systems keep businesses alive, but not ahead. To compete, enterprises need platforms that scale, comply, and evolve into intelligent systems without blowing up costs or breaking sovereignty rules. We design foundations that work now and adapt effortlessly when AI is ready to step in.
               </p>
             </div>
@@ -108,8 +108,8 @@ export default function SoftwareDevelopmentPage() {
         <section className="py-16">
           <div className="container">
             <div className="max-w-6xl mx-auto text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">What You Gain</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">What You Gain</h2>
+              <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                 Outcomes-focused engineering that keeps your platforms resilient today and ready for intelligence tomorrow.
               </p>
             </div>
@@ -122,17 +122,17 @@ export default function SoftwareDevelopmentPage() {
                       <div className="w-14 h-14 rounded-xl bg-indigo-100 flex items-center justify-center mb-4">
                         <Icon className="h-7 w-7 text-indigo-600" />
                       </div>
-                      <CardTitle className="text-xl">{item.title}</CardTitle>
+                      <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">{item.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base leading-relaxed">{item.description}</CardDescription>
+                      <CardDescription className="text-[1.0625rem] leading-[1.29]">{item.description}</CardDescription>
                     </CardContent>
                   </Card>
                 )
               })}
             </div>
             <div className="max-w-4xl mx-auto text-center mt-12">
-              <p className="text-base text-muted-foreground">
+              <p className="text-[1rem] leading-[1.31] text-muted-foreground">
                 Need AI strategy or integration?
                 <Link href="/services/ai-consulting" className="ml-2 font-semibold text-indigo-600 hover:underline">
                   AI Consulting & Integration
@@ -145,8 +145,8 @@ export default function SoftwareDevelopmentPage() {
         <section className="py-16 bg-muted/30">
           <div className="container">
             <div className="max-w-5xl mx-auto text-center mb-10 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">How We Work</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">How We Work</h2>
+              <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                 Delivery designed for enterprise stakeholders with transparency, governance, and measurable progress at every step.
               </p>
             </div>
@@ -158,9 +158,9 @@ export default function SoftwareDevelopmentPage() {
                       {(index + 1).toString().padStart(2, "0")}
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-semibold">{step.step}</h3>
-                      <p className="text-base text-muted-foreground leading-relaxed">{step.detail}</p>
-                      <p className="text-sm font-medium text-foreground">{step.outcome}</p>
+                      <h3 className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">{step.step}</h3>
+                      <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">{step.detail}</p>
+                      <p className="text-[0.9375rem] leading-[1.33] font-medium text-foreground">{step.outcome}</p>
                     </div>
                   </div>
                 </div>
@@ -172,12 +172,12 @@ export default function SoftwareDevelopmentPage() {
         <section className="py-16">
           <div className="container">
             <div className="max-w-5xl mx-auto space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-center">Enterprise Assurances</h2>
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-center leading-[1.21] tracking-[-0.01em]">Enterprise Assurances</h2>
               <div className="grid gap-6 md:grid-cols-2">
                 {assurances.map((assurance, index) => (
                   <Card key={index} className="h-full">
                     <CardContent className="pt-6">
-                      <CardDescription className="text-base leading-relaxed text-foreground">{assurance}</CardDescription>
+                      <CardDescription className="text-[1.0625rem] leading-[1.29] text-foreground">{assurance}</CardDescription>
                     </CardContent>
                   </Card>
                 ))}
@@ -189,8 +189,8 @@ export default function SoftwareDevelopmentPage() {
         <section className="py-16 bg-muted/30">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">Build a platform that's ready for intelligence.</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">Build a platform that's ready for intelligence.</h2>
+              <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                 Let's architect the foundations that keep today's operations strong and make tomorrow's AI deployments seamless.
               </p>
               <Button asChild size="lg">

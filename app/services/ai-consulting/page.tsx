@@ -120,8 +120,8 @@ export default function AIConsultingPage() {
               <Badge variant="secondary" className="inline-flex">
                 AI Consulting & Integration
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance leading-tight">AI Consulting & Integration</h1>
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+              <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance leading-[1.2] tracking-[-0.02em]">AI Consulting & Integration</h1>
+              <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty">
                 We integrate AI into the systems you already trust automating work, accelerating decisions, and keeping governance tight. Cloud APIs when speed matters; on-prem or hybrid when control and cost predictability win.
               </p>
             </div>
@@ -130,12 +130,12 @@ export default function AIConsultingPage() {
 
         <section className="py-16 bg-muted/30">
           <div className="container">
-            <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <h2 className="text-3xl font-bold text-foreground">The Enterprise Challenge</h2>
-              <p>
+            <div className="max-w-4xl mx-auto flex flex-col gap-6 text-[1.0625rem] leading-[1.29] text-muted-foreground">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-foreground leading-[1.21] tracking-[-0.01em]">The Enterprise Challenge</h2>
+              <p className="text-[1.0625rem] leading-[1.29]">
                 Legacy keeps the lights on but slows change. Pure API-only AI can be fast but risks lock-in, unpredictable spend, and data governance gaps.
               </p>
-              <p>
+              <p className="text-[1.0625rem] leading-[1.29]">
                 The answer is intelligence embedded into your existing stack with the right deployment model for your risk, cost, and compliance profile.
               </p>
             </div>
@@ -144,9 +144,9 @@ export default function AIConsultingPage() {
 
         <section className="py-16">
           <div className="container">
-            <div className="max-w-5xl mx-auto text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">What We Do</h2>
-              <p className="text-lg text-muted-foreground">
+            <div className="max-w-5xl mx-auto text-center mb-12 flex flex-col gap-4">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">What We Do</h2>
+              <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                 Move from exploration to outcomes with AI that fits your operations, risk posture, and data estate.
               </p>
             </div>
@@ -156,8 +156,8 @@ export default function AIConsultingPage() {
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-indigo-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                      <p className="text-base text-muted-foreground leading-relaxed">{card.description}</p>
+                      <h3 className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold mb-2">{card.title}</h3>
+                      <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">{card.description}</p>
                     </div>
                   </div>
                 </div>
@@ -170,8 +170,8 @@ export default function AIConsultingPage() {
           <div className="container">
             <div className="max-w-5xl mx-auto">
               <div className="mb-12 text-center space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold">Deployment Choices</h2>
-                <p className="text-lg text-muted-foreground">
+                <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">Deployment Choices</h2>
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                   Cloud API | On-Prem | Hybrid—pick the deployment that balances time-to-value, control, and cost.
                 </p>
                 <div className="pt-4">
@@ -187,16 +187,16 @@ export default function AIConsultingPage() {
                 {deploymentOptions.map((option) => (
                   <Card key={option.title} className="h-full">
                     <CardHeader>
-                      <CardTitle className="text-xl">{option.title}</CardTitle>
+                      <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">{option.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base leading-relaxed">{option.description}</CardDescription>
+                      <CardDescription className="text-[1.0625rem] leading-[1.29]">{option.description}</CardDescription>
                     </CardContent>
                   </Card>
                 ))}
               </div>
               <div className="overflow-hidden rounded-2xl border">
-                <table className="w-full text-sm md:text-base">
+                <table className="w-full text-[0.9375rem] md:text-[1.0625rem] leading-[1.33] md:leading-[1.29]">
                   <thead className="bg-muted/60">
                     <tr>
                       <th className="px-4 py-3 text-left font-semibold text-foreground">Decision Lens</th>
@@ -227,8 +227,8 @@ export default function AIConsultingPage() {
           <div className="container">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-14 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold">Delivery Approach</h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">Delivery Approach</h2>
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground max-w-3xl mx-auto">
                   From first workshop to scaled adoption, each stage balances value, compliance, and change management.
                 </p>
               </div>
@@ -239,9 +239,9 @@ export default function AIConsultingPage() {
                       {(index + 1).toString().padStart(2, "0")}
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-semibold">{step.step}</h3>
-                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{step.detail}</p>
-                      <p className="text-sm font-medium text-foreground">{step.outcome}</p>
+                      <h3 className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">{step.step}</h3>
+                      <p className="text-[0.9375rem] md:text-[1.0625rem] leading-[1.29] text-muted-foreground">{step.detail}</p>
+                      <p className="text-[0.9375rem] leading-[1.33] font-medium text-foreground">{step.outcome}</p>
                     </div>
                   </div>
                 ))}
@@ -253,8 +253,8 @@ export default function AIConsultingPage() {
         <section className="py-16 bg-muted/30">
           <div className="container">
             <div className="max-w-5xl mx-auto space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">Governance, Security & Compliance</h2>
-              <ul className="space-y-4 text-base text-muted-foreground leading-relaxed">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">Governance, Security & Compliance</h2>
+              <ul className="flex flex-col gap-4 text-[1.0625rem] leading-[1.29] text-muted-foreground">
                 {governanceItems.map((item, index) => (
                   <li key={index} className="flex gap-3">
                     <span className="mt-2 h-2 w-2 rounded-full bg-indigo-600 flex-shrink-0" />
@@ -270,8 +270,8 @@ export default function AIConsultingPage() {
           <div className="container">
             <div className="max-w-4xl mx-auto space-y-10 text-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">Outcomes You Can Expect</h2>
-                <ul className="space-y-3 text-lg text-muted-foreground leading-relaxed text-left md:text-center">
+                <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">Outcomes You Can Expect</h2>
+                <ul className="flex flex-col gap-3 text-[1.0625rem] leading-[1.29] text-muted-foreground text-left md:text-center">
                   {outcomes.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 md:justify-center">
                       <span className="mt-2 h-2 w-2 rounded-full bg-indigo-600 flex-shrink-0" />
@@ -280,14 +280,14 @@ export default function AIConsultingPage() {
                   ))}
                 </ul>
               </div>
-              <p className="text-base text-muted-foreground">
+              <p className="text-[1rem] leading-[1.31] text-muted-foreground">
                 Need AI-ready platforms?
                 <Link href="/services/software-development" className="ml-2 font-semibold text-indigo-600 hover:underline">
                   Enterprise Software & Digital Platforms
                 </Link>
               </p>
-              <div className="space-y-4">
-                <p className="text-lg text-muted-foreground">See where AI pays off first.</p>
+              <div className="flex flex-col gap-4">
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">See where AI pays off first.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg">
                     <Link href="/contact">

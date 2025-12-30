@@ -27,7 +27,7 @@ export function Footer() {
     <footer className="border-t bg-muted/50">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+          <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center space-x-2" aria-label="Lsl home">
               <Image
                 src="/lsl-logo.png"
@@ -38,7 +38,7 @@ export function Footer() {
                 priority={false}
               />
             </Link>
-            <p className="text-sm text-muted-foreground max-w-xs">
+            <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground max-w-xs">
               From software to intelligent systems. AI consulting, integration, and product development from Kenya to
               the world.
             </p>
@@ -46,12 +46,12 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
+            <ul className="flex flex-col gap-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-[0.9375rem] leading-[1.33] text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -62,12 +62,12 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
+            <ul className="flex flex-col gap-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-[0.9375rem] leading-[1.33] text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -78,19 +78,19 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4">Get in touch</h3>
-            <ul className="space-y-2 mb-4">
+            <ul className="flex flex-col gap-2 mb-4">
               {footerLinks.contact.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-[0.9375rem] leading-[1.33] text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon
                 return (
@@ -109,7 +109,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Lsl. All rights reserved.</p>
+          <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">© 2026 Lsl. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -32,10 +32,10 @@ export default function AboutPage() {
                 <Badge variant="secondary" className="mb-4">
                   About Lsl
                 </Badge>
-                <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">
+                <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance mb-6 leading-[1.2] tracking-[-0.02em]">
                   Build transformative technology from Kenya to the world
                 </h1>
-                <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+                <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty">
                   Lsl is a private limited company incorporated in Kenya, operating at the intersection of ICT and AI. We're positioned as Kenya's answer to global technology conglomerates, a hybrid company that consults, integrates, and builds.
                 </p>
               </div>
@@ -43,10 +43,10 @@ export default function AboutPage() {
               {/* Mission Section */}
               <Card className="mb-16 bg-gradient-to-r from-indigo-50 to-blue-50 border-indigo-200">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-center">Our Mission</CardTitle>
+                  <CardTitle className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold text-center">Our Mission</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg text-center text-muted-foreground leading-relaxed">
+                  <p className="text-[1.0625rem] leading-[1.29] text-center text-muted-foreground">
                     Lsl exists to build transformative digital solutions that empower businesses, governments, and
                     individuals to thrive in an increasingly intelligent and connected world. We bridge the gap between
                     traditional IT systems and the AI-powered future through our specialized focus: AI-driven transformation of existing systems.
@@ -56,18 +56,18 @@ export default function AboutPage() {
 
               {/* Business Model Section */}
               <div className="mb-20">
-                <h2 className="text-3xl font-bold text-center mb-8">Dual-Focus Business Model</h2>
-                <p className="text-center text-muted-foreground mb-10 max-w-3xl mx-auto">
+                <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-center mb-8 leading-[1.21] tracking-[-0.01em]">Dual-Focus Business Model</h2>
+                <p className="text-center text-[1.0625rem] leading-[1.29] text-muted-foreground mb-10 max-w-3xl mx-auto">
                   Lsl operates under a unique dual-focus model that sets us apart from traditional technology companies:
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 mb-10">
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-xl">Enterprise AI Transformation</CardTitle>
+                      <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">Enterprise AI Transformation</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base leading-relaxed">
+                      <CardDescription className="text-[1.0625rem] leading-[1.29]">
                         Partnering with businesses to integrate AI into core systems, automate workflows, and unlock real-time insights.
                       </CardDescription>
                     </CardContent>
@@ -75,10 +75,10 @@ export default function AboutPage() {
 
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-xl">Product Innovation</CardTitle>
+                      <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">Product Innovation</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-base leading-relaxed">
+                      <CardDescription className="text-[1.0625rem] leading-[1.29]">
                         Building consumer apps and co-creating domain-specific AI solutions in partnership with industry leaders.
                       </CardDescription>
                     </CardContent>
@@ -99,30 +99,30 @@ export default function AboutPage() {
               {/* Vision Section */}
               <Card className="mb-20">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-center">Our Vision & Positioning</CardTitle>
+                  <CardTitle className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold text-center">Our Vision & Positioning</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-center text-muted-foreground leading-relaxed">
+                <CardContent className="flex flex-col gap-4">
+                  <p className="text-center text-[1.0625rem] leading-[1.29] text-muted-foreground">
                     To become Kenya's answer to global technology conglomerates like Tencent—a hybrid company that consults,
                     integrates, and builds. We're creating an ecosystem of AI-powered enterprises, consumer apps, and
                     digital platforms that redefine how businesses operate and how individuals interact with technology.
                   </p>
-                  <p className="text-center text-muted-foreground leading-relaxed">
+                  <p className="text-center text-[1.0625rem] leading-[1.29] text-muted-foreground">
                     Rooted in Kenya but global in ambition, Lsl is positioned to lead Africa's next wave of intelligent digital transformation while solving uniquely African challenges in law, agriculture, healthcare, and beyond.
                   </p>
                 </CardContent>
               </Card>
 
               <div className="mb-20">
-                <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
+                <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-center mb-12 leading-[1.21] tracking-[-0.01em]">Our Values</h2>
                 <div className="grid md:grid-cols-3 gap-8">
                   {values.map((value, index) => (
                     <Card key={index}>
                       <CardHeader>
-                        <CardTitle className="text-xl">{value.title}</CardTitle>
+                        <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">{value.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <CardDescription className="text-base leading-relaxed">{value.description}</CardDescription>
+                        <CardDescription className="text-[1.0625rem] leading-[1.29]">{value.description}</CardDescription>
                       </CardContent>
                     </Card>
                   ))}
@@ -130,8 +130,8 @@ export default function AboutPage() {
               </div>
 
               <div id="careers" className="text-center">
-                <h2 className="text-3xl font-bold mb-4">Join Our Team</h2>
-                <p className="text-xl text-muted-foreground mb-8">
+                <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-4 leading-[1.21] tracking-[-0.01em]">Join Our Team</h2>
+                <p className="text-[1.25rem] leading-[1.25] text-muted-foreground mb-8">
                   We're always looking for talented individuals who share our vision of transforming Africa's technology
                   landscape.
                 </p>

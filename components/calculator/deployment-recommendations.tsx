@@ -132,22 +132,22 @@ export function DeploymentRecommendations({ comparison }: DeploymentRecommendati
   }
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col gap-6">
       <Alert className={`${config.bgColor} ${config.borderColor}`}>
         <Icon className={`h-5 w-5 ${config.color}`} />
-        <AlertTitle className="text-lg font-semibold">{config.title}</AlertTitle>
-        <AlertDescription className="mt-2 text-base leading-relaxed">{recommendation.primary}</AlertDescription>
+        <AlertTitle className="text-[1.0625rem] leading-[1.29] font-semibold">{config.title}</AlertTitle>
+        <AlertDescription className="mt-2 text-[1rem] leading-[1.31]">{recommendation.primary}</AlertDescription>
       </Alert>
 
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Cost Analysis</CardTitle>
+            <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold">Cost Analysis</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="flex flex-col gap-4">
             <div>
-              <p className="text-sm text-muted-foreground mb-2">3-Year Cost Comparison</p>
-              <div className="space-y-2">
+              <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-2">3-Year Cost Comparison</p>
+              <div className="flex flex-col gap-2">
                 <div className="flex justify-between items-center p-3 rounded-lg bg-indigo-50 dark:bg-indigo-950">
                   <span className="font-medium">On-Premise ({comparison.model.name})</span>
                   <span className="font-bold">{formatCurrency(comparison.localDeployment.costAt36Months)}</span>
@@ -169,21 +169,21 @@ export function DeploymentRecommendations({ comparison }: DeploymentRecommendati
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Performance Comparison</CardTitle>
+            <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold">Performance Comparison</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="flex flex-col gap-4">
             <div>
-              <p className="text-sm text-muted-foreground mb-3">Average Benchmark Performance</p>
+              <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-3">Average Benchmark Performance</p>
               <PerformanceIndicator />
             </div>
-            <div className="pt-3 border-t space-y-2">
-              <div className="flex justify-between text-sm">
+            <div className="pt-3 border-t flex flex-col gap-2">
+              <div className="flex justify-between text-[0.9375rem] leading-[1.33]">
                 <span className="text-muted-foreground">Monthly Capacity</span>
                 <span className="font-medium">
                   {(comparison.model.monthlyCapacity / 1e6).toFixed(1)}M tokens
                 </span>
               </div>
-              <div className="flex justify-between text-sm">
+              <div className="flex justify-between text-[0.9375rem] leading-[1.33]">
                 <span className="text-muted-foreground">Throughput</span>
                 <span className="font-medium">{comparison.model.tokensPerSecond} tok/s</span>
               </div>
@@ -195,15 +195,15 @@ export function DeploymentRecommendations({ comparison }: DeploymentRecommendati
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
+            <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold flex items-center gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600" />
               Key Benefits
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2">
+            <ul className="flex flex-col gap-2">
               {recommendation.benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm">
+                <li key={index} className="flex items-start gap-2 text-[0.9375rem] leading-[1.33]">
                   <span className="text-green-600 mt-0.5">•</span>
                   <span>{benefit}</span>
                 </li>
@@ -214,15 +214,15 @@ export function DeploymentRecommendations({ comparison }: DeploymentRecommendati
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
+            <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold flex items-center gap-2">
               <AlertCircle className="h-5 w-5 text-amber-600" />
               Considerations
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2">
+            <ul className="flex flex-col gap-2">
               {recommendation.considerations.map((consideration, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm">
+                <li key={index} className="flex items-start gap-2 text-[0.9375rem] leading-[1.33]">
                   <span className="text-amber-600 mt-0.5">•</span>
                   <span>{consideration}</span>
                 </li>
@@ -237,18 +237,18 @@ export function DeploymentRecommendations({ comparison }: DeploymentRecommendati
           <CardTitle>Enterprise Decision Framework</CardTitle>
           <CardDescription>Recommended next steps for your organization</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-3">
+        <CardContent className="flex flex-col gap-3">
           {comparison.recommendation === "local" && (
             <>
-              <p className="text-sm leading-relaxed">
+              <p className="text-[0.9375rem] leading-[1.33]">
                 <strong>Small Enterprises (SMEs):</strong> If you&apos;re processing &lt;10M tokens/month, start with a
                 small model deployment. The ROI is immediate.
               </p>
-              <p className="text-sm leading-relaxed">
+              <p className="text-[0.9375rem] leading-[1.33]">
                 <strong>Medium Enterprises:</strong> For 10-50M tokens/month, medium models offer the best balance.
                 Consider starting with on-prem for steady workloads and API for bursts.
               </p>
-              <p className="text-sm leading-relaxed">
+              <p className="text-[0.9375rem] leading-[1.33]">
                 <strong>Large Enterprises:</strong> At &gt;50M tokens/month, large models become economically viable.
                 Factor in data sovereignty and compliance requirements.
               </p>
@@ -256,11 +256,11 @@ export function DeploymentRecommendations({ comparison }: DeploymentRecommendati
           )}
           {comparison.recommendation === "api" && (
             <>
-              <p className="text-sm leading-relaxed">
+              <p className="text-[0.9375rem] leading-[1.33]">
                 For your workload profile and budget constraints, cloud API services provide better value. Focus on
                 optimizing API usage through prompt engineering, caching, and model cascading.
               </p>
-              <p className="text-sm leading-relaxed">
+              <p className="text-[0.9375rem] leading-[1.33]">
                 Consider revisiting on-premise deployment when: (1) token volume exceeds 50M/month, (2) data residency
                 becomes mandatory, or (3) API pricing increases significantly.
               </p>
@@ -268,12 +268,12 @@ export function DeploymentRecommendations({ comparison }: DeploymentRecommendati
           )}
           {comparison.recommendation === "hybrid" && (
             <>
-              <p className="text-sm leading-relaxed">
+              <p className="text-[0.9375rem] leading-[1.33]">
                 <strong>Routing Strategy:</strong> Deploy {comparison.model.name} locally for high-volume, sensitive
                 workloads (document analysis, internal tools). Use {comparison.api.name} for customer-facing features
                 requiring cutting-edge capabilities.
               </p>
-              <p className="text-sm leading-relaxed">
+              <p className="text-[0.9375rem] leading-[1.33]">
                 <strong>Implementation:</strong> Build a simple routing layer that directs requests based on sensitivity
                 classification and performance requirements. This maximizes ROI while maintaining flexibility.
               </p>

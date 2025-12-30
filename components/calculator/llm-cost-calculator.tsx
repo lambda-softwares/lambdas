@@ -71,7 +71,7 @@ export function LLMCostCalculator() {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8">
       {/* Progress Indicator */}
       <div className="flex items-center justify-center gap-2">
         {["select-model", "select-api", "configure", "results"].map((s, index) => {
@@ -88,7 +88,7 @@ export function LLMCostCalculator() {
                 }`}
               >
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
+                  className={`w-8 h-8 rounded-full flex items-center justify-center text-[0.9375rem] leading-[1.33] font-semibold ${
                     isActive
                       ? "bg-indigo-600 text-white"
                       : isCompleted
@@ -98,7 +98,7 @@ export function LLMCostCalculator() {
                 >
                   {index + 1}
                 </div>
-                <span className="hidden md:inline text-sm font-medium">{stepLabels[index]}</span>
+                <span className="hidden md:inline text-[0.9375rem] leading-[1.33] font-medium">{stepLabels[index]}</span>
               </div>
               {index < 3 && <ArrowRight className="h-4 w-4 text-muted-foreground" />}
             </div>
@@ -110,7 +110,7 @@ export function LLMCostCalculator() {
       {step === "select-model" && (
         <div>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-2">Choose Your Open-Source Model</h2>
+            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-2 leading-[1.21] tracking-[-0.01em]">Choose Your Open-Source Model</h2>
             <p className="text-muted-foreground">
               Select an open-source LLM based on your scale, budget, and performance requirements
             </p>
@@ -127,7 +127,7 @@ export function LLMCostCalculator() {
       {step === "select-api" && (
         <div>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-2">Choose Commercial API to Compare</h2>
+            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-2 leading-[1.21] tracking-[-0.01em]">Choose Commercial API to Compare</h2>
             <p className="text-muted-foreground">
               Select the commercial LLM service you&apos;re considering as an alternative
             </p>
@@ -147,11 +147,11 @@ export function LLMCostCalculator() {
                 onClick={() => handleAPISelect(api.id)}
               >
                 <CardHeader>
-                  <CardTitle className="text-lg">{api.name}</CardTitle>
+                  <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold">{api.name}</CardTitle>
                   <CardDescription>{api.provider}</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="space-y-2 text-sm">
+                <CardContent className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2 text-[0.9375rem] leading-[1.33]">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Input:</span>
                       <span className="font-semibold">${api.inputPricePerM}/1M tokens</span>
@@ -186,7 +186,7 @@ export function LLMCostCalculator() {
       {step === "configure" && (
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-2">Configure Your Deployment</h2>
+            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-2 leading-[1.21] tracking-[-0.01em]">Configure Your Deployment</h2>
             <p className="text-muted-foreground">Fine-tune operational parameters for accurate cost analysis</p>
             <div className="flex gap-2 justify-center mt-4">
               <Badge variant="outline">{selectedModel?.name}</Badge>
@@ -214,12 +214,12 @@ export function LLMCostCalculator() {
                   min={1}
                   max={730}
                 />
-                <p className="text-xs text-muted-foreground">
+                <p className="text-[0.75rem] leading-[1.33] text-muted-foreground">
                   Default: 160 hours (8 hours/day × 20 days/month). Adjust for 24/7 or custom schedules.
                 </p>
               </div>
 
-              <div className="space-y-2">
+              <div className="flex flex-col gap-2">
                 <Label htmlFor="electricity-rate" className="flex items-center gap-2">
                   Electricity Rate (USD per kWh)
                   <Info className="h-4 w-4 text-muted-foreground" />
@@ -233,17 +233,17 @@ export function LLMCostCalculator() {
                   min={0.01}
                   max={1}
                 />
-                <p className="text-xs text-muted-foreground">
+                <p className="text-[0.75rem] leading-[1.33] text-muted-foreground">
                   Default: $0.15/kWh (typical business rate). Check your local commercial electricity rates.
                 </p>
               </div>
 
-              <div className="p-4 rounded-lg bg-muted/50 space-y-2">
-                <p className="font-semibold">Estimated Monthly Capacity</p>
-                <p className="text-2xl font-bold text-indigo-600">
+              <div className="p-4 rounded-lg bg-muted/50 flex flex-col gap-2">
+                <p className="font-semibold text-[1.0625rem] leading-[1.29]">Estimated Monthly Capacity</p>
+                <p className="text-[1.75rem] leading-[1.21] font-semibold text-indigo-600">
                   {selectedModel && ((selectedModel.tokensPerSecond * operatingHours * 3600) / 1e6).toFixed(1)}M tokens
                 </p>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-[0.75rem] leading-[1.33] text-muted-foreground">
                   Based on {selectedModel?.tokensPerSecond} tok/s × {operatingHours} hours
                 </p>
               </div>
@@ -263,7 +263,7 @@ export function LLMCostCalculator() {
       {step === "results" && comparison && (
         <div>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-2">Cost-Benefit Analysis Results</h2>
+            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-2 leading-[1.21] tracking-[-0.01em]">Cost-Benefit Analysis Results</h2>
             <p className="text-muted-foreground">
               Comparing {comparison.model.name} (on-premise) vs {comparison.api.name} (cloud API)
             </p>
@@ -285,8 +285,8 @@ export function LLMCostCalculator() {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-lg">On-Premise ({comparison.model.name})</h4>
-                      <div className="space-y-2 text-sm">
+                      <h4 className="font-semibold text-[1.0625rem] leading-[1.29]">On-Premise ({comparison.model.name})</h4>
+                      <div className="flex flex-col gap-2 text-[0.9375rem] leading-[1.33]">
                         <div className="flex justify-between p-2 rounded bg-muted/50">
                           <span>Hardware (one-time)</span>
                           <span className="font-semibold">
@@ -321,8 +321,8 @@ export function LLMCostCalculator() {
                     </div>
 
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-lg">Cloud API ({comparison.api.name})</h4>
-                      <div className="space-y-2 text-sm">
+                      <h4 className="font-semibold text-[1.0625rem] leading-[1.29]">Cloud API ({comparison.api.name})</h4>
+                      <div className="flex flex-col gap-2 text-[0.9375rem] leading-[1.33]">
                         <div className="flex justify-between p-2 rounded bg-muted/50">
                           <span>Hardware (one-time)</span>
                           <span className="font-semibold">$0</span>

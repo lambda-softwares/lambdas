@@ -33,8 +33,8 @@ export function ChatMessage({ message }: ChatMessageProps) {
             : "bg-muted text-foreground"
         )}
       >
-        <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-        <span className="text-xs opacity-70 mt-1 block">
+        <p className="text-[0.9375rem] leading-[1.33] whitespace-pre-wrap">{message.content}</p>
+        <span className="text-[0.75rem] leading-[1.33] opacity-70 mt-1 block">
           {message.timestamp.toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",

@@ -39,14 +39,14 @@ export default function LLMCostCalculatorPage() {
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-indigo-950 dark:via-purple-950 dark:to-pink-950">
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <div className="max-w-4xl mx-auto text-center flex flex-col gap-6">
               <Badge variant="secondary" className="inline-flex">
                 Research-Backed Analysis
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance leading-tight">
+              <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance leading-[1.2] tracking-[-0.02em]">
                 LLM Deployment Cost Calculator
               </h1>
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+              <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty">
                 Determine when on-premise LLM deployment becomes economically viable compared to commercial API
                 services. Make informed decisions backed by peer-reviewed research.
               </p>
@@ -59,8 +59,8 @@ export default function LLMCostCalculatorPage() {
           <div className="container">
             <Alert className="max-w-5xl mx-auto">
               <BookOpen className="h-5 w-5" />
-              <AlertTitle className="text-lg font-semibold">Based on Academic Research</AlertTitle>
-              <AlertDescription className="mt-2 text-base leading-relaxed">
+              <AlertTitle className="text-[1.0625rem] leading-[1.29] font-semibold">Based on Academic Research</AlertTitle>
+              <AlertDescription className="mt-2 text-[1rem] leading-[1.31]">
                 This calculator implements the methodology from{" "}
                 <span className="font-semibold">
                   &quot;A Cost-Benefit Analysis of On-Premise Large Language Model Deployment: Breaking Even with
@@ -86,8 +86,8 @@ export default function LLMCostCalculatorPage() {
           <div className="container">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold mb-4">Key Research Findings</h2>
-                <p className="text-lg text-muted-foreground">
+                <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-4 leading-[1.21] tracking-[-0.01em]">Key Research Findings</h2>
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                   Understand the economics before you deploy
                 </p>
               </div>
@@ -95,9 +95,9 @@ export default function LLMCostCalculatorPage() {
                 <div className="p-6 rounded-lg border bg-card">
                   <div className="flex items-center gap-2 mb-3">
                     <TrendingUp className="h-6 w-6 text-green-600" />
-                    <h3 className="font-semibold text-lg">Small Models</h3>
+                    <h3 className="font-semibold text-[1.0625rem] leading-[1.29]">Small Models</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
                     Break-even in as little as <strong className="text-foreground">0.3-3 months</strong> against
                     premium services. Ideal for SMEs with modest token volumes (&lt;10M/month).
                   </p>
@@ -105,9 +105,9 @@ export default function LLMCostCalculatorPage() {
                 <div className="p-6 rounded-lg border bg-card">
                   <div className="flex items-center gap-2 mb-3">
                     <TrendingUp className="h-6 w-6 text-indigo-600" />
-                    <h3 className="font-semibold text-lg">Medium Models</h3>
+                    <h3 className="font-semibold text-[1.0625rem] leading-[1.29]">Medium Models</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
                     Break-even ranges from <strong className="text-foreground">3.8-34 months</strong>. Sweet spot for
                     medium enterprises processing 10-50M tokens/month.
                   </p>
@@ -115,9 +115,9 @@ export default function LLMCostCalculatorPage() {
                 <div className="p-6 rounded-lg border bg-card">
                   <div className="flex items-center gap-2 mb-3">
                     <TrendingUp className="h-6 w-6 text-orange-600" />
-                    <h3 className="font-semibold text-lg">Large Models</h3>
+                    <h3 className="font-semibold text-[1.0625rem] leading-[1.29]">Large Models</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
                     Break-even extends to <strong className="text-foreground">3.5-69 months</strong>. Viable for
                     large enterprises with extreme workloads (&gt;50M tokens/month).
                   </p>
@@ -137,14 +137,14 @@ export default function LLMCostCalculatorPage() {
         {/* Methodology */}
         <section className="py-12">
           <div className="container">
-            <div className="max-w-4xl mx-auto space-y-6">
-              <h2 className="text-3xl font-bold">Methodology</h2>
+            <div className="max-w-4xl mx-auto flex flex-col gap-6">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">Methodology</h2>
               <div className="prose prose-sm max-w-none dark:prose-invert">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                   Our calculator implements seven core equations from the research paper to model total cost of
                   ownership (TCO):
                 </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="flex flex-col gap-2 text-[0.9375rem] leading-[1.33] text-muted-foreground">
                   <li>
                     <strong>Hardware Cost:</strong> C<sub>hardware</sub> = N<sub>GPU</sub> × C<sub>GPU</sub>
                   </li>
@@ -163,7 +163,7 @@ export default function LLMCostCalculatorPage() {
                     <strong>Break-even:</strong> Solve for t* where C<sub>local</sub>(t) = C<sub>API</sub>(t)
                   </li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed mt-4">
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground mt-4">
                   Performance benchmarks (GPQA, MATH-500, MMLU-Pro, LiveCodeBench) are sourced from Artificial Analysis
                   and model providers. All pricing reflects commercial rates as of late 2024/early 2025.
                 </p>
@@ -175,9 +175,9 @@ export default function LLMCostCalculatorPage() {
         {/* CTA */}
         <section className="py-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
           <div className="container">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">Need Help With Your AI Deployment Strategy?</h2>
-              <p className="text-lg text-indigo-100 leading-relaxed">
+            <div className="max-w-3xl mx-auto text-center flex flex-col gap-6">
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold leading-[1.21] tracking-[-0.01em]">Need Help With Your AI Deployment Strategy?</h2>
+              <p className="text-[1.0625rem] leading-[1.29] text-indigo-100">
                 Our AI architects can help you interpret these results, design hybrid deployment architectures, and
                 implement the solution that maximizes your ROI.
               </p>

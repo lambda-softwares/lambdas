@@ -12,9 +12,9 @@ export default function NotFoundPage() {
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
-              <h1 className="text-6xl md:text-8xl font-bold text-muted-foreground mb-4">404</h1>
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Page not found</h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <h1 className="text-[3.5rem] md:text-[5rem] font-semibold text-muted-foreground mb-4 leading-[1.2] tracking-[-0.02em]">404</h1>
+              <h2 className="text-[1.375rem] md:text-[1.75rem] font-semibold mb-4 leading-[1.27] tracking-[-0.01em]">Page not found</h2>
+              <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground mb-8">
                 The page you're looking for doesn't exist or has been moved.
               </p>
             </div>

@@ -31,7 +31,7 @@ export function ModelSelector({ models, selectedModelId, onSelectModel }: ModelS
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <CardTitle className="text-lg flex items-center gap-2">
+              <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold flex items-center gap-2">
                 {model.name}
                 {isSelected && <Check className="h-5 w-5 text-indigo-600" />}
               </CardTitle>
@@ -45,7 +45,7 @@ export function ModelSelector({ models, selectedModelId, onSelectModel }: ModelS
           </div>
         </CardHeader>
         <CardContent className="space-y-3">
-          <div className="grid grid-cols-2 gap-3 text-sm">
+          <div className="grid grid-cols-2 gap-3 text-[0.9375rem] leading-[1.33]">
             <div>
               <p className="text-muted-foreground">Hardware Cost</p>
               <p className="font-semibold">${model.hardwareCost.toLocaleString()}</p>
@@ -65,8 +65,8 @@ export function ModelSelector({ models, selectedModelId, onSelectModel }: ModelS
           </div>
 
           <div className="pt-2 border-t">
-            <p className="text-xs text-muted-foreground mb-2">Performance Benchmarks</p>
-            <div className="grid grid-cols-2 gap-2 text-xs">
+            <p className="text-[0.75rem] leading-[1.33] text-muted-foreground mb-2">Performance Benchmarks</p>
+            <div className="grid grid-cols-2 gap-2 text-[0.75rem] leading-[1.33]">
               <div>
                 <span className="text-muted-foreground">GPQA:</span>{" "}
                 <span className="font-medium">{model.benchmarks.gpqa}%</span>
@@ -91,13 +91,13 @@ export function ModelSelector({ models, selectedModelId, onSelectModel }: ModelS
   }
 
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8">
       <div>
-        <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+        <h3 className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold mb-4 flex items-center gap-2">
           Small Models
           <Badge variant="outline">Entry-Level</Badge>
         </h3>
-        <p className="text-sm text-muted-foreground mb-4">
+        <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-4">
           Perfect for SMEs and small-scale deployments. Consumer-grade GPU (RTX 5090), break-even in 0.3-3 months.
         </p>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -108,11 +108,11 @@ export function ModelSelector({ models, selectedModelId, onSelectModel }: ModelS
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+        <h3 className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold mb-4 flex items-center gap-2">
           Medium Models
           <Badge variant="outline">Balanced</Badge>
         </h3>
-        <p className="text-sm text-muted-foreground mb-4">
+        <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-4">
           Ideal for medium enterprises. 1-2× datacenter GPUs (A100), break-even in 3.8-34 months.
         </p>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -123,11 +123,11 @@ export function ModelSelector({ models, selectedModelId, onSelectModel }: ModelS
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+        <h3 className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold mb-4 flex items-center gap-2">
           Large Models
           <Badge variant="outline">Enterprise-Scale</Badge>
         </h3>
-        <p className="text-sm text-muted-foreground mb-4">
+        <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground mb-4">
           For large enterprises with extreme workloads (&gt;50M tokens/month). Multi-node GPU clusters, break-even in
           3.5-69 months.
         </p>

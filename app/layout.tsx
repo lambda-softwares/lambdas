@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Domine, Karla, Oswald } from "next/font/google"
+import { Roboto, Roboto_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
@@ -8,24 +8,17 @@ import { ChatWidget } from "@/components/chat/chat-widget"
 
 const SITE_URL = "https://www.lsl.co.ke"
 
-const oswald = Oswald({
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+})
+
+const robotoMono = Roboto_Mono({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-oswald",
-  display: "swap",
-})
-
-const domine = Domine({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-domine",
-  display: "swap",
-})
-
-const karla = Karla({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-karla",
+  variable: "--font-mono",
   display: "swap",
 })
 
@@ -103,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${oswald.variable} ${domine.variable} ${karla.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${robotoMono.variable}`}>
       <body className="antialiased">
         <Suspense>
           {children}

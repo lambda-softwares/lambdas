@@ -120,26 +120,64 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-domine), serif;
-    font-size: 1.0625rem;
-    line-height: 1.7;
+    font-family: var(--font-mono), monospace;
+    font-size: 1.0625rem; /* Apple Body - 17px */
+    line-height: 1.29; /* 22px */
+    letter-spacing: 0;
   }
 
-  /* Headings use Oswald */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-oswald), sans-serif;
-    font-weight: 500;
-  }
-
-  /* Bold text leans on Oswald for emphasis */
-  strong, b, .font-bold {
-    font-family: var(--font-oswald), sans-serif;
+  /* Apple Typography Scale - Headings (Roboto Mono) */
+  h1 {
+    font-family: var(--font-mono), monospace;
+    font-size: 2.125rem; /* Large Title - 34px */
+    line-height: 1.2; /* 41px */
+    letter-spacing: -0.02em;
     font-weight: 600;
   }
 
-  /* Button and UI text uses Karla */
-  button, .btn {
-    font-family: var(--font-karla), sans-serif;
+  h2 {
+    font-family: var(--font-mono), monospace;
+    font-size: 1.75rem; /* Title 1 - 28px */
+    line-height: 1.21; /* 34px */
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-family: var(--font-mono), monospace;
+    font-size: 1.375rem; /* Title 2 - 22px */
+    line-height: 1.27; /* 28px */
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-family: var(--font-mono), monospace;
+    font-size: 1.25rem; /* Title 3 - 20px */
+    line-height: 1.25; /* 25px */
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-family: var(--font-mono), monospace;
+    font-size: 1.0625rem; /* Headline - 17px */
+    line-height: 1.29; /* 22px */
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  h6 {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.9375rem; /* Subhead - 15px */
+    line-height: 1.33; /* 20px */
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  /* Bold text (Roboto Mono) */
+  strong, b, .font-bold, .font-semibold {
+    font-family: var(--font-mono), monospace;
   }
 }
 
@@ -148,21 +186,4 @@
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  /* Font utility classes */
-  .font-oswald {
-    font-family: var(--font-oswald), sans-serif;
-  }
-
-  .font-domine {
-    font-family: var(--font-domine), serif;
-  }
-
-  .font-karla {
-    font-family: var(--font-karla), sans-serif;
-  }
-
-  /* Ensure semibold and bold classes use Oswald */
-  .font-semibold, .font-bold {
-    font-family: var(--font-oswald), sans-serif;
-  }
 }

@@ -14,8 +14,8 @@ export default function PrivacyPage() {
                 <Badge variant="secondary" className="mb-4">
                   Privacy Policy
                 </Badge>
-                <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">Privacy Policy</h1>
-                <p className="text-xl text-muted-foreground">Last updated: January 2024</p>
+                <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance mb-6 leading-[1.2] tracking-[-0.02em]">Privacy Policy</h1>
+                <p className="text-[1.25rem] leading-[1.25] text-muted-foreground">Last updated: January 2024</p>
               </div>
 
               <div className="prose prose-lg max-w-none">

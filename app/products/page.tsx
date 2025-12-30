@@ -93,13 +93,13 @@ export default function ProductsPage() {
               <Badge variant="secondary" className="mb-4">
                 In-House Consumer Apps
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">
+              <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance mb-6 leading-[1.2] tracking-[-0.02em]">
                 Innovation Labs
               </h1>
-              <p className="text-lg font-semibold text-indigo-700 text-pretty max-w-2xl mx-auto">
+              <p className="text-[1.0625rem] leading-[1.29] font-semibold text-indigo-700 text-pretty max-w-2xl mx-auto">
                 Where future ideas are built, tested, and proven.
               </p>
-              <p className="mt-4 text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
+              <p className="mt-4 text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
                 At Lsl, Innovation Labs is our sandbox for consumer apps, AI patterns, and new digital experiences. Every
                 prototype isn't just an experiment, it's a real-world testbed that validates concepts, reveals adoption
                 patterns, and sharpens the enterprise solutions we deliver to our clients.
@@ -107,8 +107,8 @@ export default function ProductsPage() {
             </div>
 
             <div id="intro" className="max-w-4xl mx-auto text-center mb-16 space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold">Exploring What's Next, Today</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <h2 className="text-[1.375rem] md:text-[1.75rem] font-semibold leading-[1.27] tracking-[-0.01em]">Exploring What's Next, Today</h2>
+              <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                 Innovation Labs is where Lsl turns bold ideas into working prototypes. We build fast, test with real
                 users, and learn what sticks. Every experiment is more than a concept it's a proof point that feeds
                 directly into stronger, smarter enterprise solutions.
@@ -117,8 +117,8 @@ export default function ProductsPage() {
 
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-2xl md:text-3xl font-bold mb-3">Focus Areas Under Exploration</h2>
-                <p className="text-lg text-muted-foreground">
+                <h2 className="text-[1.375rem] md:text-[1.75rem] font-semibold mb-3 leading-[1.27] tracking-[-0.01em]">Focus Areas Under Exploration</h2>
+                <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
                   Each initiative keeps us close to real users and real-world impact.
                 </p>
               </div>
@@ -133,9 +133,9 @@ export default function ProductsPage() {
                           <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center">
                             <Icon className="h-6 w-6 text-indigo-600" />
                           </div>
-                        <CardTitle className="text-xl">{area.title}</CardTitle>
+                        <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">{area.title}</CardTitle>
                         </div>
-                      <CardDescription className="text-base leading-relaxed">{area.description}</CardDescription>
+                      <CardDescription className="text-[1.0625rem] leading-[1.29]">{area.description}</CardDescription>
                     </CardHeader>
                     <CardContent className="pt-0" />
                   </Card>
@@ -145,12 +145,12 @@ export default function ProductsPage() {
             </div>
 
             <div className="bg-muted/30 rounded-2xl p-12 max-w-5xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">Why This Matters</h2>
+              <h2 className="text-[1.375rem] md:text-[1.75rem] font-semibold mb-6 leading-[1.27] tracking-[-0.01em]">Why This Matters</h2>
               <div className="grid md:grid-cols-3 gap-6 text-left">
                 {whyPoints.map((point) => (
                   <div key={point.title} className="bg-background/60 rounded-xl border border-border/60 p-6">
-                    <h3 className="font-semibold text-lg mb-2">{point.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{point.description}</p>
+                    <h3 className="font-semibold text-[1.0625rem] leading-[1.29] mb-2">{point.title}</h3>
+                    <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">{point.description}</p>
                   </div>
                 ))}
               </div>

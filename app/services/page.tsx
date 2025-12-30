@@ -69,18 +69,18 @@ export default function ServicesPage() {
         <section className="py-16 lg:py-24">
           <div className="container">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-balance mb-6">
+              <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance mb-6 leading-[1.2] tracking-[-0.02em]">
                 Enterprise Services for the Intelligent Era
               </h1>
-              <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto leading-relaxed">
+              <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
                 From legacy systems to intelligent enterprises, we modernize safely, integrate AI where it matters, and build platforms that scale—designed for security, compliance, and measurable ROI.
               </p>
             </div>
 
             <div className="max-w-4xl mx-auto mb-16">
               <div className="rounded-3xl border bg-muted/40 p-8 lg:p-10 text-left md:text-center space-y-6">
-                <h2 className="text-2xl font-semibold">Who We Serve</h2>
-                <div className="space-y-3 text-muted-foreground text-lg">
+                <h2 className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold">Who We Serve</h2>
+                <div className="flex flex-col gap-3 text-[1.0625rem] leading-[1.29] text-muted-foreground">
                   <p>Enterprises and public institutions with significant data, compliance mandates, and complex workflows.</p>
                   <p>Teams exploring AI pilots or scaling production integrations—including on-prem and hybrid deployments for data-sensitive environments.</p>
                 </div>
@@ -96,15 +96,15 @@ export default function ServicesPage() {
                       <div className="w-16 h-16 rounded-xl bg-indigo-100 flex items-center justify-center mb-6">
                         <Icon className="h-8 w-8 text-indigo-600" />
                       </div>
-                      <CardTitle className="text-2xl mb-4">{service.title}</CardTitle>
-                      <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                      <CardTitle className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold mb-4">{service.title}</CardTitle>
+                      <CardDescription className="text-[1.0625rem] leading-[1.29]">{service.description}</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-6">
                       <div>
                         <h4 className="font-semibold mb-3">How We Help:</h4>
-                        <ul className="space-y-2">
+                        <ul className="flex flex-col gap-2">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                            <li key={featureIndex} className="flex items-center text-[0.9375rem] leading-[1.33] text-muted-foreground">
                               <div className="w-1.5 h-1.5 rounded-full bg-indigo-600 mr-3 flex-shrink-0" />
                               {feature}
                             </li>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="max-w-5xl mx-auto mt-20">
-              <h2 className="text-3xl font-bold text-center mb-8">Challenges We Solve</h2>
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-center mb-8 leading-[1.21] tracking-[-0.01em]">Challenges We Solve</h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-left">
                 {[
                   "Legacy drag → Systems that run the business but block innovation and agility.",
@@ -141,7 +141,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="max-w-6xl mx-auto mt-20">
-              <h2 className="text-3xl font-bold text-center mb-8">Our Enterprise Approach</h2>
+              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-center mb-8 leading-[1.21] tracking-[-0.01em]">Our Enterprise Approach</h2>
               <div className="lsl-roadmap-viewport relative overflow-hidden rounded-3xl border border-border/70 bg-muted/30 p-6 md:p-10">
                 <div className="lsl-roadmap-track flex gap-6" aria-live="polite">
                   {marqueeSteps.map((step, index) => {
@@ -154,14 +154,14 @@ export default function ServicesPage() {
                         aria-hidden={isDuplicate}
                       >
                         <header className="mb-4 flex items-center gap-3">
-                          <span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-100/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-700">
+                          <span className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-100/60 px-3 py-1 text-[0.75rem] leading-[1.33] font-semibold uppercase tracking-wide text-indigo-700">
                             Step {displayNumber}
                           </span>
                           <span className="h-px flex-1 rounded-full bg-indigo-200" aria-hidden="true" />
                         </header>
-                        <div className="space-y-3 text-left">
-                          <h3 className="text-xl font-semibold text-foreground">{step.title}</h3>
-                          <p className="text-base leading-relaxed text-muted-foreground">{step.description}</p>
+                        <div className="flex flex-col gap-3 text-left">
+                          <h3 className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold text-foreground">{step.title}</h3>
+                          <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">{step.description}</p>
                         </div>
                       </article>
                     )
@@ -171,7 +171,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-center mt-16">
-              <p className="text-lg text-muted-foreground mb-6">Ready to modernize?</p>
+              <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground mb-6">Ready to modernize?</p>
               <Button asChild size="lg">
                 <Link href="/contact">
                   Talk to an AI Architect and let's design your roadmap from legacy IT to intelligent enterprise.

@@ -16,7 +16,7 @@ const serviceLinks = [
 const navigation = [
   { label: "Enterprise Services", href: "/services", children: serviceLinks },
   { label: "Solutions", href: "/solutions" },
-  { label: "Innovation Labs", href: "/products" },
+  { label: "Labs", href: "/products" },
   { label: "About", href: "/about" },
 ]
 
@@ -46,7 +46,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center gap-8">
           {navigation.map((item) => {
             if (item.children) {
               return (
@@ -60,7 +60,7 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
+                    className="text-[1rem] leading-[1.31] font-medium text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-0.5"
                     aria-haspopup="menu"
                     aria-expanded={isServicesOpen}
                   >
@@ -81,12 +81,12 @@ export function Header() {
                         : "pointer-events-none -translate-y-2 opacity-0",
                     )}
                   >
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col gap-0.5">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                      className="rounded-sm px-2 py-1.5 text-base text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                      className="rounded-sm px-2 py-1.5 text-[1rem] leading-[1.31] text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -101,7 +101,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-[1rem] leading-[1.31] font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </Link>
@@ -109,7 +109,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center gap-4">
           <Button asChild className="hidden md:inline-flex">
             <Link href="/contact">Talk to an AI Architect</Link>
           </Button>
@@ -123,12 +123,12 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <div className="flex flex-col space-y-4 mt-8">
+              <div className="flex flex-col gap-4 mt-8">
                 {navigation.map((item) => (
                   <div key={item.href} className="flex flex-col gap-2">
                     <Link
                       href={item.href}
-                      className="text-lg font-medium hover:text-accent transition-colors"
+                      className="text-[1.0625rem] leading-[1.29] font-semibold hover:text-accent transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.label}
@@ -139,7 +139,7 @@ export function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="text-base text-muted-foreground hover:text-foreground transition-colors"
+                            className="text-[1rem] leading-[1.31] text-muted-foreground hover:text-foreground transition-colors"
                             onClick={() => setIsOpen(false)}
                           >
                             {child.label}

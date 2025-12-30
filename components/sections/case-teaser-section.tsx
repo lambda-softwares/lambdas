@@ -27,8 +27,8 @@ export function CaseTeaserSection() {
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-balance mb-4">What success looks like</h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
+            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">What success looks like</h2>
+            <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-2xl mx-auto">
               Real outcomes from our AI integration and development projects across industries.
             </p>
           </div>
@@ -37,13 +37,13 @@ export function CaseTeaserSection() {
             {cases.map((caseItem, index) => (
               <Card key={index} className="group hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg leading-tight">{caseItem.title}</CardTitle>
+                  <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold">{caseItem.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed mb-4">{caseItem.description}</CardDescription>
+                  <CardDescription className="text-[1.0625rem] leading-[1.29] mb-4">{caseItem.description}</CardDescription>
                   <Link
                     href={caseItem.href}
-                    className="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
+                    className="inline-flex items-center text-[0.9375rem] leading-[1.33] font-semibold text-indigo-600 hover:text-indigo-700 transition-colors"
                   >
                     Explore solutions
                     <ArrowRight className="ml-1 h-4 w-4" />
