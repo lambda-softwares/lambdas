@@ -56,7 +56,7 @@ const timeline = [
 
 export function BridgeProcessSection() {
   return (
-    <section className="py-16 lg:py-24 relative overflow-hidden">
+    <section className="py-12 lg:py-16 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-px bg-gradient-to-r from-transparent via-[#324038]/10 to-transparent" />
@@ -65,17 +65,17 @@ export function BridgeProcessSection() {
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">
+          <div className="text-center mb-12">
+            <h2 className="text-[1.5rem] md:text-[1.875rem] font-semibold text-balance mb-4 leading-[1.25] tracking-[-0.01em]">
               How the Bridge Works
             </h2>
-            <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
+            <p className="text-[1.125rem] leading-[1.5] text-muted-foreground text-pretty max-w-3xl mx-auto">
               A visual journey from traditional systems to intelligent platforms—showing exactly how we bridge the gap.
             </p>
           </div>
 
           {/* Process Visualization - Architectural Diagram Style */}
-          <div className="mb-16">
+          <div className="mb-12">
             <div className="relative">
               {/* Bridge Visual - Horizontal Flow */}
               <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 -translate-y-1/2 z-0">
@@ -92,7 +92,7 @@ export function BridgeProcessSection() {
               </div>
 
               {/* Steps Grid */}
-              <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative z-10">
+              <div className="grid md:grid-cols-3 gap-5 lg:gap-6 relative z-10">
                 {processSteps.map((step, index) => {
                   const Icon = step.icon
                   const isMiddle = index === 1
@@ -123,10 +123,10 @@ export function BridgeProcessSection() {
                           {/* Card Header with Icon */}
                           <CardHeader className="relative pb-4">
                             {/* Icon Container */}
-                            <div className={`relative mb-6 ${isMiddle ? 'mb-8' : ''}`}>
+                            <div className={`relative mb-5 ${isMiddle ? 'mb-6' : ''}`}>
                               {/* Icon Background with Glow */}
-                              <div className={`w-20 h-20 ${isMiddle ? 'w-24 h-24' : ''} rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 ${isMiddle ? 'ring-4 ring-[#324038]/30' : ''}`}>
-                                <Icon className={`${isMiddle ? 'h-12 w-12' : 'h-10 w-10'} text-white`} />
+                              <div className={`w-16 h-16 ${isMiddle ? 'w-20 h-20' : ''} rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 ${isMiddle ? 'ring-4 ring-[#324038]/30' : ''}`}>
+                                <Icon className={`${isMiddle ? 'h-10 w-10' : 'h-8 w-8'} text-white`} />
                               </div>
                               
                               {/* Decorative Elements for Middle Card */}
@@ -138,10 +138,10 @@ export function BridgeProcessSection() {
                               )}
                             </div>
 
-                            <CardTitle className={`text-center ${isMiddle ? 'text-[1.5rem]' : 'text-[1.375rem]'} leading-[1.27] tracking-[-0.01em] font-semibold mb-3 ${isMiddle ? 'text-[#324038]' : ''}`}>
+                            <CardTitle className={`text-center ${isMiddle ? 'text-[1.25rem]' : 'text-[1.125rem]'} leading-[1.3] tracking-[-0.01em] font-semibold mb-3 ${isMiddle ? 'text-[#324038]' : ''}`}>
                               {step.stage}
                             </CardTitle>
-                            <CardDescription className="text-center text-[1.0625rem] leading-[1.29]">
+                            <CardDescription className="text-center text-[1rem] leading-[1.5]">
                               {step.description}
                             </CardDescription>
                           </CardHeader>
@@ -179,15 +179,15 @@ export function BridgeProcessSection() {
           </div>
 
           {/* Key Metrics - Visual Stats */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="grid md:grid-cols-3 gap-5 mb-12">
             <div className="relative group">
               <Card className="h-full border-2 border-[#324038]/20 hover:border-[#324038]/40 transition-all duration-300 hover:shadow-xl">
-                <CardContent className="pt-6 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#324038]/10 mb-4 group-hover:bg-[#324038]/20 transition-colors">
-                    <CheckCircle2 className="h-8 w-8 text-[#324038]" />
+                <CardContent className="pt-5 text-center">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#324038]/10 mb-4 group-hover:bg-[#324038]/20 transition-colors">
+                    <CheckCircle2 className="h-7 w-7 text-[#324038]" />
                   </div>
-                  <div className="text-[2.5rem] font-bold text-[#324038] mb-2">0%</div>
-                  <p className="text-[1.0625rem] font-semibold text-foreground mb-1">Disruption</p>
+                  <div className="text-[2rem] font-bold text-[#324038] mb-2">0%</div>
+                  <p className="text-[1rem] font-semibold text-foreground mb-1">Disruption</p>
                   <p className="text-[0.9375rem] text-muted-foreground">Operations continue uninterrupted</p>
                 </CardContent>
               </Card>
@@ -195,12 +195,12 @@ export function BridgeProcessSection() {
             
             <div className="relative group">
               <Card className="h-full border-2 border-[#324038]/20 hover:border-[#324038]/40 transition-all duration-300 hover:shadow-xl">
-                <CardContent className="pt-6 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#324038]/10 mb-4 group-hover:bg-[#324038]/20 transition-colors">
-                    <Database className="h-8 w-8 text-[#324038]" />
+                <CardContent className="pt-5 text-center">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#324038]/10 mb-4 group-hover:bg-[#324038]/20 transition-colors">
+                    <Database className="h-7 w-7 text-[#324038]" />
                   </div>
-                  <div className="text-[2.5rem] font-bold text-[#324038] mb-2">100%</div>
-                  <p className="text-[1.0625rem] font-semibold text-foreground mb-1">System Preservation</p>
+                  <div className="text-[2rem] font-bold text-[#324038] mb-2">100%</div>
+                  <p className="text-[1rem] font-semibold text-foreground mb-1">System Preservation</p>
                   <p className="text-[0.9375rem] text-muted-foreground">All existing systems maintained</p>
                 </CardContent>
               </Card>
@@ -208,12 +208,12 @@ export function BridgeProcessSection() {
             
             <div className="relative group">
               <Card className="h-full border-2 border-[#324038]/20 hover:border-[#324038]/40 transition-all duration-300 hover:shadow-xl">
-                <CardContent className="pt-6 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#324038]/10 mb-4 group-hover:bg-[#324038]/20 transition-colors">
-                    <TrendingUp className="h-8 w-8 text-[#324038]" />
+                <CardContent className="pt-5 text-center">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#324038]/10 mb-4 group-hover:bg-[#324038]/20 transition-colors">
+                    <TrendingUp className="h-7 w-7 text-[#324038]" />
                   </div>
-                  <div className="text-[2.5rem] font-bold text-[#324038] mb-2">3-6</div>
-                  <p className="text-[1.0625rem] font-semibold text-foreground mb-1">Months</p>
+                  <div className="text-[2rem] font-bold text-[#324038] mb-2">3-6</div>
+                  <p className="text-[1rem] font-semibold text-foreground mb-1">Months</p>
                   <p className="text-[0.9375rem] text-muted-foreground">To full transformation</p>
                 </CardContent>
               </Card>
@@ -223,10 +223,10 @@ export function BridgeProcessSection() {
           {/* Timeline - Enhanced Visual */}
           <Card className="border-2 border-[#324038]/20 bg-gradient-to-br from-muted/30 to-background">
             <CardHeader>
-              <CardTitle className="text-[1.5rem] leading-[1.25] tracking-[-0.01em] font-semibold text-center">
+              <CardTitle className="text-[1.25rem] leading-[1.3] tracking-[-0.01em] font-semibold text-center">
                 Typical Transformation Timeline
               </CardTitle>
-              <CardDescription className="text-center text-[1.0625rem]">
+              <CardDescription className="text-center text-[1rem]">
                 Quick wins in weeks, full transformation in months—not years
               </CardDescription>
             </CardHeader>
@@ -235,7 +235,7 @@ export function BridgeProcessSection() {
                 {/* Timeline Line */}
                 <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-[#324038]/20 via-[#324038]/40 to-[#324038]/20" />
                 
-                <div className="grid md:grid-cols-4 gap-6 relative">
+                <div className="grid md:grid-cols-4 gap-5 relative">
                   {timeline.map((item, index) => (
                     <div key={index} className="relative">
                       {/* Timeline Connector */}
@@ -245,12 +245,12 @@ export function BridgeProcessSection() {
                       
                       <div className="relative z-10 bg-background rounded-lg p-4 border border-[#324038]/10 hover:border-[#324038]/30 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#324038] to-[#795953] text-white flex items-center justify-center text-[0.875rem] font-bold flex-shrink-0 shadow-lg">
+                          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#324038] to-[#795953] text-white flex items-center justify-center text-[0.875rem] font-bold flex-shrink-0 shadow-lg">
                             {index + 1}
                           </div>
                           <div className="text-[0.875rem] font-semibold text-[#324038]">{item.week}</div>
                         </div>
-                        <h4 className="font-semibold mb-2 text-[1.0625rem] text-foreground">{item.milestone}</h4>
+                        <h4 className="font-semibold mb-2 text-[1rem] text-foreground">{item.milestone}</h4>
                         <p className="text-[0.9375rem] text-muted-foreground leading-relaxed">{item.description}</p>
                       </div>
                     </div>

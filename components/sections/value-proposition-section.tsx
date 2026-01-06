@@ -42,35 +42,35 @@ const comparison = [
 
 export function ValuePropositionSection() {
   return (
-    <section className="py-16 lg:py-24 bg-muted/30">
+    <section className="py-12 lg:py-16 bg-muted/30">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">
+          <div className="text-center mb-12">
+            <h2 className="text-[1.5rem] md:text-[1.875rem] font-semibold text-balance mb-4 leading-[1.25] tracking-[-0.01em]">
               What Makes Lsl Different
             </h2>
-            <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
+            <p className="text-[1.125rem] leading-[1.5] text-muted-foreground text-pretty max-w-3xl mx-auto">
               While others replace, we bridge. While others disrupt, we integrate. While others lock you in, we set you free.
             </p>
           </div>
 
           {/* Differentiators */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="grid md:grid-cols-3 gap-5 mb-12">
             {differentiators.map((item, index) => {
               const Icon = item.icon
               return (
                 <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-[#324038]/30">
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-xl bg-[#324038]/10 flex items-center justify-center mb-4 group-hover:bg-[#324038]/20 transition-colors">
-                      <Icon className="h-6 w-6 text-[#324038]" />
+                    <div className="w-10 h-10 rounded-xl bg-[#324038]/10 flex items-center justify-center mb-4 group-hover:bg-[#324038]/20 transition-colors">
+                      <Icon className="h-5 w-5 text-[#324038]" />
                     </div>
-                    <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">
+                    <CardTitle className="text-[1.125rem] leading-[1.33] tracking-[-0.01em] font-semibold">
                       {item.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-[1.0625rem] leading-[1.29]">
+                    <CardDescription className="text-[1rem] leading-[1.5]">
                       {item.description}
                     </CardDescription>
                   </CardContent>
@@ -80,23 +80,23 @@ export function ValuePropositionSection() {
           </div>
 
           {/* Others vs lsl Comparison */}
-          <Card className="mb-12 border-2 border-[#324038]/20">
+          <Card className="mb-10 border-2 border-[#324038]/20">
             <CardHeader>
-              <CardTitle className="text-[1.5rem] leading-[1.25] tracking-[-0.01em] font-semibold text-center">
+              <CardTitle className="text-[1.25rem] leading-[1.3] tracking-[-0.01em] font-semibold text-center">
                 What Others Do vs. How We Do It
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-6">
                 {/* Others */}
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <XCircle className="h-5 w-5 text-red-500" />
-                    <h3 className="text-[1.125rem] font-semibold">What Others Do</h3>
+                    <h3 className="text-[1rem] font-semibold">What Others Do</h3>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5">
                     {comparison.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2 text-[1.0625rem] text-muted-foreground">
+                      <li key={index} className="flex items-start gap-2 text-[1rem] text-muted-foreground">
                         <XCircle className="h-4 w-4 text-red-400 mt-1 flex-shrink-0" />
                         <span>{item.others}</span>
                       </li>
@@ -108,11 +108,11 @@ export function ValuePropositionSection() {
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <CheckCircle2 className="h-5 w-5 text-[#324038]" />
-                    <h3 className="text-[1.125rem] font-semibold">How We Do It</h3>
+                    <h3 className="text-[1rem] font-semibold">How We Do It</h3>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5">
                     {comparison.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2 text-[1.0625rem] text-foreground">
+                      <li key={index} className="flex items-start gap-2 text-[1rem] text-foreground">
                         <CheckCircle2 className="h-4 w-4 text-[#324038] mt-1 flex-shrink-0" />
                         <span>{item.lsl}</span>
                       </li>
@@ -124,11 +124,11 @@ export function ValuePropositionSection() {
           </Card>
 
           {/* Key Benefits */}
-          <div className="bg-gradient-to-r from-[#324038]/5 to-[#795953]/5 rounded-2xl p-8 md:p-10 mb-12">
-            <h3 className="text-[1.375rem] font-semibold text-center mb-8">
+          <div className="bg-gradient-to-r from-[#324038]/5 to-[#795953]/5 rounded-2xl p-6 md:p-8 mb-10">
+            <h3 className="text-[1.25rem] font-semibold text-center mb-6">
               Keep Your Existing Systems + Add AI Intelligence
             </h3>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-[#324038] mt-1 flex-shrink-0" />
                 <div>

@@ -33,7 +33,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{ borderBottom: "1px solid rgba(121, 89, 83, 0.08)" }}>
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-14 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2" aria-label="Lsl home">
           <Image
             src="/lsl-logo.png"
@@ -41,12 +41,12 @@ export function Header() {
             width={140}
             height={140}
             priority
-            className="h-14 w-auto sm:h-16"
+            className="h-12 w-auto sm:h-14"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navigation.map((item) => {
             if (item.children) {
               return (
@@ -110,7 +110,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button asChild className="hidden md:inline-flex bg-[#324038] hover:bg-[#3d4f45]">
+          <Button asChild size="lg" className="hidden md:inline-flex bg-[#324038] hover:bg-[#3d4f45]">
             <Link href="/contact">Get Free Consultation</Link>
           </Button>
 

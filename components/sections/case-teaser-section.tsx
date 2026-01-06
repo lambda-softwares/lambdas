@@ -35,17 +35,17 @@ const cases = [
 
 export function CaseTeaserSection() {
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-12 lg:py-16">
       <div className="container">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">What success looks like</h2>
-            <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-[1.5rem] md:text-[1.875rem] font-semibold text-balance mb-4 leading-[1.25] tracking-[-0.01em]">What success looks like</h2>
+            <p className="text-[1.125rem] leading-[1.5] text-muted-foreground text-pretty max-w-2xl mx-auto">
               Real outcomes from enterprises that chose the bridge approach—transformation without disruption.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-5 mb-10">
             {cases.map((caseItem, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#324038]/30">
                 <CardHeader>
@@ -63,8 +63,8 @@ export function CaseTeaserSection() {
                       </div>
                     </div>
                   </div>
-                  <CardTitle className="text-[1.0625rem] leading-[1.29] font-semibold mb-2">{caseItem.title}</CardTitle>
-                  <CardDescription className="text-[1.0625rem] leading-[1.29] mb-3">{caseItem.description}</CardDescription>
+                  <CardTitle className="text-[1rem] leading-[1.5] font-semibold mb-2">{caseItem.title}</CardTitle>
+                  <CardDescription className="text-[1rem] leading-[1.5] mb-3">{caseItem.description}</CardDescription>
                   
                   {/* Bridge Method Callout */}
                   <div className="p-3 rounded-lg bg-[#324038]/5 border border-[#324038]/10 mb-3">

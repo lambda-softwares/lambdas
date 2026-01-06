@@ -28,8 +28,8 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer style={{ backgroundColor: "#EFEEE9", borderTop: "1px solid rgba(121, 89, 83, 0.05)" }}>
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container py-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center space-x-2" aria-label="Lsl home">
               <Image
@@ -37,11 +37,11 @@ export function Footer() {
                 alt="Lsl"
                 width={200}
                 height={200}
-                className="h-24 w-auto md:h-28"
+                className="h-20 w-auto md:h-24"
                 priority={false}
               />
             </Link>
-            <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground max-w-xs mb-4">
+            <p className="text-[0.9375rem] leading-[1.5] text-muted-foreground max-w-xs mb-4">
               Kenya-native, globally oriented AI consulting, integration, and product-development company. Bridge from traditional software to intelligent systems.
             </p>
             <div className="flex flex-col gap-2 text-[0.875rem] text-muted-foreground">
