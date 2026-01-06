@@ -53,8 +53,8 @@ export default function TermsPage() {
                 <h2>Contact Information</h2>
                 <p>
                   Questions about the Terms of Service should be sent to us at{" "}
-                  <a href="mailto:hello@lsl.co.ke" className="text-indigo-600 hover:text-indigo-700">
-                    hello@lsl.co.ke
+                  <a href="mailto:lambda@denning.pro" className="text-indigo-600 hover:text-indigo-700">
+                    lambda@denning.pro
                   </a>
                   .
                 </p>

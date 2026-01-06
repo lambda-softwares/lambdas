@@ -8,12 +8,15 @@ const footerLinks = {
     { label: "Careers", href: "/about#careers" },
   ],
   legal: [
-    { label: "Privacy", href: "/privacy" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Website Privacy Notice", href: "/privacy/website-notice" },
+    { label: "Cookie Notice", href: "/privacy/cookies" },
     { label: "Terms", href: "/terms" },
   ],
   contact: [
     { label: "Contact", href: "/contact" },
-    { label: "Email", href: "mailto:hello@lsl.co.ke" },
+    { label: "Email", href: "mailto:lambda@denning.pro" },
+    { label: "Phone", href: "tel:+254702931388" },
   ],
 }
 
@@ -38,10 +41,23 @@ export function Footer() {
                 priority={false}
               />
             </Link>
-            <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground max-w-xs">
-              From software to intelligent systems. AI consulting, integration, and product development from Kenya to
-              the world.
+            <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground max-w-xs mb-4">
+              Kenya-native, globally oriented AI consulting, integration, and product-development company. Bridge from traditional software to intelligent systems.
             </p>
+            <div className="flex flex-col gap-2 text-[0.875rem] text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#324038]"></span>
+                <span>Zero-disruption guarantee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#324038]"></span>
+                <span>100% system preservation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#324038]"></span>
+                <span>Security & compliance built-in</span>
+              </div>
+            </div>
           </div>
 
           <div>

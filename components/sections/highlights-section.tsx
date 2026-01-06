@@ -10,33 +10,33 @@ const highlights = [
   },
   {
     icon: Workflow,
-    title: "Practical, Not Hype",
+    title: "Practical, Impact-Driven Solutions",
     description:
-      "We build AI that works in the real world: document intake, fraud detection, compliance monitoring, and customer support automating what matters most to your bottom line.",
+      "Everything we build must improve efficiency, reduce errors, enhance compliance, and deliver measurable ROI. We build AI that works in the real world: document intake, fraud detection, compliance monitoring, and customer support automating what matters most to your bottom line.",
   },
   {
     icon: Puzzle,
     title: "Legacy-Friendly Integration",
     description:
-      "Your existing systems aren’t obsolete. We amplify them with APIs and microservices so you gain intelligence without expensive rip-and-replace migrations.",
+      "Your existing systems aren't obsolete. We bridge them with intelligent APIs and microservices so you gain AI capabilities without expensive rip-and-replace migrations.",
   },
   {
     icon: ShieldCheck,
-    title: "Secure & Compliant by Default",
+    title: "Secure & Compliant by Design",
     description:
-      "Every build comes with governance, audit trails, and risk controls baked in. From Kenya’s Data Protection Act to GDPR principles, compliance is in our DNA.",
+      "Every solution incorporates Kenya Data Protection Act requirements, GDPR-aligned governance, audit trails, risk-control frameworks, secure deployment architectures, and ethical AI & bias-mitigation practices.",
   },
   {
     icon: Handshake,
-    title: "Partner, Not Vendor",
+    title: "Co-Creation Model",
     description:
-      "We co-create with your industry experts. You bring the domain knowledge, we bring the AI engineering together we deliver tools that actually solve your sector’s problems.",
+      "We build solutions with industry experts, not for them—ensuring accuracy, adoption, and impact. You bring the domain knowledge, we bring the AI engineering together we deliver tools that actually solve your sector's problems.",
   },
   {
     icon: Globe2,
-    title: "Africa-Born, Globally Ready",
+    title: "Kenya-Native, Globally Ready",
     description:
-      "We’re rooted in Kenya’s innovation ecosystem but designed for global scale. Local realities understood, solutions built to world-class standards.",
+      "Our systems understand local realities but meet global engineering standards. We're rooted in Kenya's innovation ecosystem but designed for global scale.",
   },
 ]
 
@@ -47,9 +47,9 @@ export function HighlightsSection() {
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 flex flex-col gap-6">
-            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance leading-[1.21] tracking-[-0.01em]">Why Enterprises Choose Lsl</h2>
+            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance leading-[1.21] tracking-[-0.01em]">Why Leading Organizations Choose lsl</h2>
             <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
-              At Lsl, we don't just deliver AI solutions, we deliver trust, transformation, and results. Here's why leading
+              At lsl, we don't just deliver AI solutions, we deliver trust, transformation, and results. Here's why leading
               businesses and forward-looking organizations choose us.
             </p>
           </div>

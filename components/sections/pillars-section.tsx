@@ -8,7 +8,7 @@ const pillars = [
   {
     icon: Brain,
     title: "AI Consulting & Integration",
-    description: "Transform traditional IT systems into intelligent, automated platforms. From readiness assessments to production deployment and team training.",
+    description: "Bridge traditional IT systems to intelligent, automated platforms. Zero-disruption integration from readiness assessments to production deployment and team training.",
     href: "/services/ai-consulting",
     // Roycroft Bottle Green #324038 with White Mink #EFEEE9
     gradientFrom: "rgba(50, 64, 56, 0.08)",
@@ -24,7 +24,7 @@ const pillars = [
   {
     icon: Building2,
     title: "Industry-Specific Solutions",
-    description: "Partnership-based co-development of AI solutions across 14+ sectors. Contextually accurate, compliant, and genuinely impactful.",
+    description: "Co-build domain-specific AI tools in partnership with sector experts and enterprise clients. We co-create solutions with industry experts—clients bring domain knowledge; lsl engineers bring AI expertise.",
     href: "/solutions",
     // Sequoia Dusk #795953 with White Mink #EFEEE9
     gradientFrom: "rgba(121, 89, 83, 0.08)",
@@ -40,7 +40,7 @@ const pillars = [
   {
     icon: Smartphone,
     title: "Consumer Innovation Labs",
-    description: "In-house apps that solve everyday problems while serving as testing grounds for enterprise AI technologies.",
+    description: "In-house consumer app development allows lsl to experiment with new technologies, validate AI patterns before enterprise deployment, build products that solve everyday problems, and transfer successful architectures into enterprise-grade systems.",
     href: "/products",
     // White Mink #EFEEE9 with Matt Black #151515 accents
     gradientFrom: "rgba(239, 238, 233, 0.95)",
@@ -63,10 +63,9 @@ export function PillarsSection() {
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">Three ways we transform your business</h2>
+            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">Three ways we bridge traditional to intelligent</h2>
             <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-2xl mx-auto">
-              From AI strategy to consumer products, we deliver measurable outcomes across every layer of your
-              technology stack.
+              From bridging legacy systems with AI to co-developing intelligent solutions, we transform your business without disruption.
             </p>
           </div>
 
@@ -120,7 +119,7 @@ export function PillarsSection() {
                     className="font-semibold px-6 py-2.5 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:brightness-110"
                     style={{ backgroundColor: pillars[0].buttonColor, color: "#EFEEE9" }}
                   >
-                    <Link href={pillars[0].href}>Learn more →</Link>
+                    <Link href={pillars[0].href}>See How We Bridge Systems →</Link>
                   </Button>
                 </CardContent>
               </div>
@@ -188,7 +187,7 @@ export function PillarsSection() {
                           )}
                         >
                           <Link href={pillar.href}>
-                            Learn more →
+                            Explore Bridge Approach →
                           </Link>
                         </Button>
                       </CardContent>

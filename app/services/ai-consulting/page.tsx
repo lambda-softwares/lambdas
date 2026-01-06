@@ -8,24 +8,24 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 
 const valueCards = [
   {
-    title: "AI Readiness Roadmaps",
-    description: "Identify high-impact use cases with ROI, risk, and compliance mapped.",
+    title: "AI Readiness Assessments",
+    description: "Identify high-impact use cases with ROI, risk, and compliance mapped. Map operational pain points, data maturity, and system architecture.",
   },
   {
-    title: "Domain Models & Evaluations",
-    description: "Build and tune models with accuracy, fairness, and interpretability; evaluate continuously.",
+    title: "LLM and ML Model Development",
+    description: "Build and tune models with accuracy, fairness, and interpretability. Domain-specific models evaluated continuously for performance.",
   },
   {
-    title: "Seamless Integration",
-    description: "Augment ERPs, CRMs, and proprietary systems via modular services, no rip-and-replace.",
+    title: "Integration via APIs and Microservices",
+    description: "Augment ERPs, CRMs, and proprietary systems via modular services—no rip-and-replace, no broken handovers, no vendor fragmentation.",
   },
   {
-    title: "Agentic Automation",
-    description: "Document intake, fraud/compliance monitoring, and support bots that reduce cycle times and errors.",
+    title: "Workflow Automation and Optimization",
+    description: "Intelligent document processing (IDP), fraud detection, risk scoring, chatbots, copilots, and internal agent systems that reduce cycle times and errors.",
   },
   {
-    title: "Change & Training",
-    description: "Playbooks and enablement so adoption sticks beyond the pilot.",
+    title: "Deployment, Monitoring, and Training",
+    description: "From concept to full production deployment. Playbooks, enablement, and team training so adoption sticks beyond the pilot.",
   },
 ]
 
@@ -96,10 +96,12 @@ const deliverySteps = [
 ]
 
 const governanceItems = [
-  "Access & Identity: SSO, RBAC/ABAC, least-privilege enforced.",
-  "Data Controls: Residency, masking, retention, audit trails.",
-  "AI Safety: Guardrails, red-teaming, bias/toxicity checks with human-in-the-loop where required.",
-  "Regulatory Fit: Kenya DPA, GDPR principles, sector readiness for healthcare, finance, and public sector.",
+  "Kenya Data Protection Act: Full compliance with local data protection requirements.",
+  "GDPR Principles: Aligned governance frameworks for international standards.",
+  "Risk-Control Frameworks: Comprehensive risk management and mitigation strategies.",
+  "Audit Logs: Complete audit trails for compliance and accountability.",
+  "Secure Deployment Architectures: Enterprise-grade security from day one.",
+  "Ethical AI & Bias-Mitigation Practices: Responsible AI development with fairness and transparency.",
 ]
 
 const outcomes = [
@@ -122,7 +124,7 @@ export default function AIConsultingPage() {
               </Badge>
               <h1 className="text-[2.125rem] md:text-[2.75rem] font-semibold text-balance leading-[1.2] tracking-[-0.02em]">AI Consulting & Integration</h1>
               <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty">
-                We integrate AI into the systems you already trust automating work, accelerating decisions, and keeping governance tight. Cloud APIs when speed matters; on-prem or hybrid when control and cost predictability win.
+                Transforming legacy IT systems into intelligent, automated platforms. We integrate AI into the systems you already trust—automating work, accelerating decisions, and keeping governance tight. No broken handovers, no vendor fragmentation. Cloud APIs when speed matters; on-prem or hybrid when control and cost predictability win.
               </p>
             </div>
           </div>

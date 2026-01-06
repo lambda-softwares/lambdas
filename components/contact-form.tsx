@@ -93,7 +93,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
     } catch (error) {
       console.error("Form submission error:", error)
       // In a real app, you'd show an error message to the user
-      alert("We could not submit your request. Please email hello@lsl.co.ke.")
+      alert("We could not submit your request. Please email lambda@denning.pro.")
     } finally {
       setIsSubmitting(false)
     }

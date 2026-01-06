@@ -26,7 +26,7 @@ export function ChatWindow({ messages, isTyping, onSendMessage }: ChatWindowProp
   return (
     <DialogContent className="sm:max-w-[500px] h-[600px] flex flex-col p-0 gap-0">
       <DialogHeader className="px-6 py-4 border-b">
-        <DialogTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">LSL Companion</DialogTitle>
+        <DialogTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] font-semibold">lsl Companion</DialogTitle>
         <p className="text-[0.9375rem] leading-[1.33] text-muted-foreground">
           Connect with our consultants, book a call, or schedule a meeting
         </p>
@@ -37,7 +37,7 @@ export function ChatWindow({ messages, isTyping, onSendMessage }: ChatWindowProp
           <div className="flex items-center justify-center h-full text-center">
             <div className="max-w-sm flex flex-col gap-3">
               <p className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
-                👋 Hi! I'm LSL Companion. I can help you connect with our team:
+                👋 Hi! I'm lsl Companion. I can help you connect with our team:
               </p>
               <ul className="text-[0.9375rem] leading-[1.33] text-muted-foreground flex flex-col gap-2">
                 <li>• Book a call with our AI Consultants</li>

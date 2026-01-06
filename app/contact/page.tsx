@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    description: "hello@lsl.co.ke",
-    action: "mailto:hello@lsl.co.ke",
+    description: "lambda@denning.pro",
+    action: "mailto:lambda@denning.pro",
   },
   {
     icon: MapPin,
@@ -23,9 +23,9 @@ const contactInfo = [
   },
   {
     icon: Clock,
-    title: "Response Time",
-    description: "1-2 business days",
-    action: null,
+    title: "Phone",
+    description: "+254 702 931 388",
+    action: "tel:+254702931388",
   },
 ]
 

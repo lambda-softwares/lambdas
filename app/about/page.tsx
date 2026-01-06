@@ -2,6 +2,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { LeadershipSection } from "@/components/sections/leadership-section"
+import { ApproachSection } from "@/components/sections/approach-section"
 
 const values = [
   {
@@ -36,7 +38,7 @@ export default function AboutPage() {
                   Build transformative technology from Kenya to the world
                 </h1>
                 <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty">
-                  Lsl is a private limited company incorporated in Kenya, operating at the intersection of ICT and AI. We're positioned as Kenya's answer to global technology conglomerates, a hybrid company that consults, integrates, and builds.
+                  Lambda Softwares Limited (LSL) is a Kenya-native, globally oriented AI consulting, integration, and product-development company helping businesses transition from traditional software environments into intelligent, automated systems. We follow a partner, not vendor approach—clients bring domain knowledge; lsl engineers bring AI and system-design expertise.
                 </p>
               </div>
 
@@ -47,9 +49,7 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-[1.0625rem] leading-[1.29] text-center text-muted-foreground">
-                    Lsl exists to build transformative digital solutions that empower businesses, governments, and
-                    individuals to thrive in an increasingly intelligent and connected world. We bridge the gap between
-                    traditional IT systems and the AI-powered future through our specialized focus: AI-driven transformation of existing systems.
+                    To help businesses modernize operations by integrating AI into the tools they already use, co-creating solutions that deliver measurable outcomes, strengthen governance, and elevate Africa into the global intelligent-systems economy.
                   </p>
                 </CardContent>
               </Card>
@@ -99,16 +99,11 @@ export default function AboutPage() {
               {/* Vision Section */}
               <Card className="mb-20">
                 <CardHeader>
-                  <CardTitle className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold text-center">Our Vision & Positioning</CardTitle>
+                  <CardTitle className="text-[1.375rem] leading-[1.27] tracking-[-0.01em] font-semibold text-center">Our Vision</CardTitle>
                 </CardHeader>
-                <CardContent className="flex flex-col gap-4">
+                <CardContent>
                   <p className="text-center text-[1.0625rem] leading-[1.29] text-muted-foreground">
-                    To become Kenya's answer to global technology conglomerates like Tencent—a hybrid company that consults,
-                    integrates, and builds. We're creating an ecosystem of AI-powered enterprises, consumer apps, and
-                    digital platforms that redefine how businesses operate and how individuals interact with technology.
-                  </p>
-                  <p className="text-center text-[1.0625rem] leading-[1.29] text-muted-foreground">
-                    Rooted in Kenya but global in ambition, Lsl is positioned to lead Africa's next wave of intelligent digital transformation while solving uniquely African challenges in law, agriculture, healthcare, and beyond.
+                    To become Africa's leading builder of intelligent systems—powering organizations with secure, context-aware, industry-specific AI solutions designed for real-world impact.
                   </p>
                 </CardContent>
               </Card>
@@ -128,6 +123,10 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
+
+              <LeadershipSection />
+
+              <ApproachSection />
 
               <div id="careers" className="text-center">
                 <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold mb-4 leading-[1.21] tracking-[-0.01em]">Join Our Team</h2>

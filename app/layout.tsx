@@ -24,11 +24,11 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Lsl - From software to intelligent systems",
+    default: "Lsl - Bridge from traditional software to intelligent systems",
     template: "%s | Lsl",
   },
   description:
-    "Kenya's technology transformation partner. We integrate AI into existing systems, build domain-specific AI products across 14+ industries, and ship consumer apps. Private limited company specializing in AI consulting, industry solutions, and product innovation.",
+    "Kenya-native, globally oriented AI consulting, integration, and product-development company. We bridge the gap from traditional software to intelligent systems, helping businesses across 14+ industries transform operations through AI integration, co-development, and innovation.",
   keywords: ["AI consulting Kenya", "software development", "artificial intelligence", "system integration", "AgriTech", "FinTech", "LegalTech", "HealthTech", "Industry 4.0", "consumer apps", "technology transformation"],
   authors: [{ name: "Lsl" }],
   creator: "Lsl",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "en_KE",
     url: "https://www.lsl.co.ke",
     siteName: "Lsl",
-    title: "Lsl - From software to intelligent systems",
+    title: "Lsl - Bridge from traditional software to intelligent systems",
     description: "We integrate AI into existing systems, build domain-specific AI products, and ship consumer apps.",
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@lsl_ke",
     creator: "@lsl_ke",
-    title: "Lsl - From software to intelligent systems",
+    title: "Lsl - Bridge from traditional software to intelligent systems",
     description: "We integrate AI into existing systems, build domain-specific AI products, and ship consumer apps.",
     images: ["/og/og-default.png"],
   },
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
       name: "Lsl",
       url: "https://www.lsl.co.ke",
       logo: new URL("/lsl-logo.png", SITE_URL).toString(),
-      description: "Kenya's technology transformation partner offering AI consulting, industry-specific solutions across 14+ sectors, consumer app development, and system integration services. Private limited company specializing in AI-driven transformation of existing systems.",
+      description: "Kenya-native, globally oriented AI consulting, integration, and product-development company. We bridge the gap from traditional software to intelligent systems, helping businesses across 14+ industries transform operations through AI integration, co-development, and innovation.",
       address: {
         "@type": "PostalAddress",
         addressCountry: "KE",

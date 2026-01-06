@@ -110,8 +110,8 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button asChild className="hidden md:inline-flex">
-            <Link href="/contact">Talk to an AI Architect</Link>
+          <Button asChild className="hidden md:inline-flex bg-[#324038] hover:bg-[#3d4f45]">
+            <Link href="/contact">Get Free Consultation</Link>
           </Button>
 
           {/* Mobile Navigation */}
@@ -149,9 +149,9 @@ export function Header() {
                     )}
                   </div>
                 ))}
-                <Button asChild className="mt-8">
+                <Button asChild className="mt-8 bg-[#324038] hover:bg-[#3d4f45]">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    Talk to an AI Architect
+                    Get Free Consultation
                   </Link>
                 </Button>
               </div>

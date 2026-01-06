@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     const validatedData = contactSchema.parse(body)
 
     // In a real implementation, you would:
-    // 1. Send email notification to hello@lsl.co.ke
+    // 1. Send email notification to lambda@denning.pro
     // 2. Store the lead in a database or CRM
     // 3. Send confirmation email to the user
 

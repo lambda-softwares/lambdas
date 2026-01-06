@@ -164,7 +164,7 @@ export function ChatWidget() {
       setMessages((prev) =>
         prev.map((msg) =>
           msg.id === assistantMessageId
-            ? { ...msg, content: "I apologize, but I'm having trouble connecting right now. Please try again or contact us directly at hello@lsl.co.ke" }
+            ? { ...msg, content: "I apologize, but I'm having trouble connecting right now. Please try again or contact us directly at lambda@denning.pro" }
             : msg
         )
       )

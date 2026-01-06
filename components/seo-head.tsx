@@ -9,7 +9,7 @@ interface SeoHeadProps {
 }
 
 export function SeoHead({
-  title = "Lsl - From software to intelligent systems",
+  title = "Lsl - Bridge from traditional software to intelligent systems",
   description = "We integrate AI into existing systems, build domain-specific AI products, and ship consumer apps.",
   ogImage = "/og/og-default.png",
   canonical,
