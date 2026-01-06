@@ -47,15 +47,15 @@ const metrics = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-16 lg:py-24 bg-muted/30">
+    <section className="py-12 lg:py-16 bg-muted/30">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Metrics Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
             {metrics.map((metric, index) => (
               <Card key={index} className="text-center border-2 hover:border-[#324038]/30 transition-colors">
-                <CardContent className="pt-6">
-                  <div className="text-[2rem] md:text-[2.5rem] font-bold text-[#324038] mb-2">
+                <CardContent className="pt-5">
+                  <div className="text-[1.875rem] md:text-[2.25rem] font-bold text-[#324038] mb-2">
                     {metric.value}
                   </div>
                   <div className="text-[0.9375rem] text-muted-foreground">
@@ -67,22 +67,22 @@ export function TestimonialsSection() {
           </div>
 
           {/* Testimonials */}
-          <div className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">
+          <div className="mb-12">
+            <div className="text-center mb-10">
+              <h2 className="text-[1.5rem] md:text-[1.875rem] font-semibold text-balance mb-4 leading-[1.25] tracking-[-0.01em]">
                 What Our Clients Say
               </h2>
-              <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-3xl mx-auto">
+              <p className="text-[1.125rem] leading-[1.5] text-muted-foreground text-pretty max-w-3xl mx-auto">
                 Real results from enterprises that chose the bridge approach over rip-and-replace.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-5">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-[#324038]/30">
-                  <CardContent className="pt-6">
-                    <Quote className="h-8 w-8 text-[#324038]/30 mb-4" />
-                    <p className="text-[1.0625rem] leading-[1.29] text-foreground mb-6">
+                  <CardContent className="pt-5">
+                    <Quote className="h-7 w-7 text-[#324038]/30 mb-4" />
+                    <p className="text-[1rem] leading-[1.5] text-foreground mb-5">
                       "{testimonial.quote}"
                     </p>
                     <div className="border-t pt-4">
@@ -104,10 +104,10 @@ export function TestimonialsSection() {
 
           {/* Trusted By Section */}
           <div>
-            <p className="text-center text-[0.9375rem] text-muted-foreground mb-8">
+            <p className="text-center text-[0.9375rem] text-muted-foreground mb-6">
               Trusted by forward-thinking organizations
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
+            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-60">
               {clientLogos.map((client, index) => (
                 <div
                   key={index}

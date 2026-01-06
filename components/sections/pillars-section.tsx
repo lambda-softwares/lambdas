@@ -59,17 +59,17 @@ export function PillarsSection() {
   const FeaturedIcon = pillars[0].icon
   
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-12 lg:py-16">
       <div className="container">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-[1.75rem] md:text-[2.125rem] font-semibold text-balance mb-4 leading-[1.21] tracking-[-0.01em]">Three ways we bridge traditional to intelligent</h2>
-            <p className="text-[1.25rem] leading-[1.25] text-muted-foreground text-pretty max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-[1.5rem] md:text-[1.875rem] font-semibold text-balance mb-4 leading-[1.25] tracking-[-0.01em]">Three ways we bridge traditional to intelligent</h2>
+            <p className="text-[1.125rem] leading-[1.5] text-muted-foreground text-pretty max-w-2xl mx-auto">
               From bridging legacy systems with AI to co-developing intelligent solutions, we transform your business without disruption.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Large Featured Card - AI Consulting */}
             <Card
                   className={cn(
@@ -88,11 +88,11 @@ export function PillarsSection() {
                     background: `linear-gradient(to bottom right, ${pillars[0].gradientFrom}, ${pillars[0].gradientVia}, ${pillars[0].gradientTo})`,
                   }}
                 >
-                  <div className="relative z-20 p-8">
-                    <CardHeader className="p-0 mb-6">
+                  <div className="relative z-20 p-6">
+                    <CardHeader className="p-0 mb-5">
                       <div
                         className={cn(
-                          "w-16 h-16 rounded-xl flex items-center justify-center mb-6",
+                          "w-14 h-14 rounded-xl flex items-center justify-center mb-5",
                           "transition-all duration-300",
                           "group-hover:scale-110",
                           pillars[0].iconBg
@@ -100,23 +100,24 @@ export function PillarsSection() {
                       >
                         <FeaturedIcon
                           className={cn(
-                            "h-8 w-8 transition-all duration-300",
+                            "h-7 w-7 transition-all duration-300",
                             pillars[0].iconColor,
                             "group-hover:shadow-[0_0_20px_rgba(50,64,56,0.3)]"
                           )}
                         />
                       </div>
-                  <CardTitle className="text-[1.5rem] md:text-[1.75rem] leading-[1.21] tracking-[-0.01em] mb-3">
+                  <CardTitle className="text-[1.25rem] md:text-[1.5rem] leading-[1.3] tracking-[-0.01em] mb-3">
                     {pillars[0].title}
                   </CardTitle>
-                  <CardDescription className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
+                  <CardDescription className="text-[1rem] leading-[1.5] text-muted-foreground">
                     {pillars[0].description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-0">
                   <Button
                     asChild
-                    className="font-semibold px-6 py-2.5 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:brightness-110"
+                    size="lg"
+                    className="font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:brightness-110"
                     style={{ backgroundColor: pillars[0].buttonColor, color: "#EFEEE9" }}
                   >
                     <Link href={pillars[0].href}>See How We Bridge Systems →</Link>
@@ -126,7 +127,7 @@ export function PillarsSection() {
             </Card>
 
             {/* Smaller Cards Stack */}
-            <div className="flex flex-col gap-6 md:col-span-1">
+            <div className="flex flex-col gap-5 md:col-span-1">
               {pillars.slice(1).map((pillar, index) => {
                 const Icon = pillar.icon
                 return (
@@ -150,11 +151,11 @@ export function PillarsSection() {
                       background: `linear-gradient(to bottom right, ${pillar.gradientFrom}, ${pillar.gradientVia}, ${pillar.gradientTo})`,
                     }}
                   >
-                    <div className="relative z-20 p-6">
+                    <div className="relative z-20 p-5">
                       <CardHeader className="p-0 mb-4">
                         <div
                           className={cn(
-                            "w-12 h-12 rounded-lg flex items-center justify-center mb-4",
+                            "w-10 h-10 rounded-lg flex items-center justify-center mb-4",
                             "transition-all duration-300",
                             "group-hover:scale-110",
                             pillar.iconBg
@@ -162,7 +163,7 @@ export function PillarsSection() {
                         >
                           <Icon
                             className={cn(
-                              "h-6 w-6 transition-all duration-300",
+                              "h-5 w-5 transition-all duration-300",
                               pillar.iconColor,
                               index === 0 
                                 ? "group-hover:shadow-[0_0_20px_rgba(121,89,83,0.3)]"
@@ -170,10 +171,10 @@ export function PillarsSection() {
                             )}
                           />
                         </div>
-                        <CardTitle className="text-[1.25rem] leading-[1.25] tracking-[-0.01em] mb-2">
+                        <CardTitle className="text-[1.125rem] leading-[1.33] tracking-[-0.01em] mb-2">
                           {pillar.title}
                         </CardTitle>
-                        <CardDescription className="text-[1.0625rem] leading-[1.29] text-muted-foreground">
+                        <CardDescription className="text-[1rem] leading-[1.5] text-muted-foreground">
                           {pillar.description}
                         </CardDescription>
                       </CardHeader>
